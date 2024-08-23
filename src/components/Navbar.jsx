@@ -1,6 +1,7 @@
 import logo from "../assets/kevinRushLogo.png"
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const Navbar = () => {
   return (
@@ -11,6 +12,7 @@ const Navbar = () => {
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
             <FaLinkedin/>
             <FaGithub/>
+            <SiLeetcode />
         </div>
     </nav>
   )
