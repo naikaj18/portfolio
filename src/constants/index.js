@@ -4,7 +4,12 @@ import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `Welcome to my portfolio! I’m Naikaj Jayant Shiradkar, a computer science professional with a deep passion for technology and innovation. My journey in this field began with a fascination for how things work and a relentless curiosity to create and improve solutions that make a difference.
+
+With a Master’s degree from California State University, Fullerton, and hands-on experience as a Senior Analyst at Capgemini, I’ve developed a strong foundation in software development and database management. I’m driven by a belief that technology has the power to solve real-world problems and improve lives, which motivates me in every project I undertake.
+
+Whether it’s developing algorithms, mentoring team members, or exploring the latest advancements in machine learning, I’m constantly motivated by the impact my work can have. I also enjoy staying at the forefront of technological trends, participating in hackathons, and contributing to open-source projects.
+`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 

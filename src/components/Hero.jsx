@@ -15,11 +15,11 @@ const Hero = () => {
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2">
                     <div className="flex flex-col items-center lg:items-start">
-                        <motion.h1
+                        <motion.h1 
                         variants={container(0)}
                         initial= "hidden"
                         animate ="visible"
-                        className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">Naikaj Shiradkar</motion.h1>
+                        className="pb-10 text-6xl font-thin tracking-tight  lg:text-8xl">Naikaj Shiradkar</motion.h1>
                         <motion.span variants={container(0.3)}
                         initial ="hidden"
                         animate ="visible"
@@ -32,7 +32,7 @@ const Hero = () => {
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8">
                 <div className="flex justify-center">
-                    <motion.img initial={{x:100,opacity:0}} animate={{x:0,opacity:1}} transition={{duration:1,delay:0.7}}className="rounded-2xl lg:mt-20 lg:pt-10 xl:mt-0 xl:pt-0" src = {profilePic} alt="Naikaj Shiradkar" />
+                    <motion.img initial={{x:100,opacity:0}} animate={{x:0,opacity:1}} transition={{duration:1,delay:0.7}}className="rounded-2xl 2xl:mt-0 xl:mt-15 lg:ml-20 lg:mt-[120px] 2xl:ml-10  xl:mt-0 xl:pt-0" src = {profilePic} alt="Naikaj Shiradkar" />
                 </div>
                 </div>
             </div>
