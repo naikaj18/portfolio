@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import project5 from "../assets/projects/project-5.jpg";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -9,36 +10,15 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
+    year: "Jan 2020 - July 2022",
+    role: "Senior Analyst",
+    company: "Capgemini",
+    description: `Led a team in optimizing SQL queries and automating 70% of monitoring tasks. Resolved 470+ tickets, improving system reliability. Designed APIs and managed 100+ database objects. Recognized with STAR and XTRA MILE awards.`,
+    technologies: ["PLSQL", "SQL", "IFS", "Java"],
+  }
 ];
-
-export const PROJECTS = [
+// description: `As a Senior Analyst at Capgemini, I played a crucial role in driving efficiency and reliability across Development, Operations, and Administration teams. I spearheaded the development and optimization of SQL queries, procedures, and scripts, successfully automating 70% of routine monitoring tasks. My proactive approach in resolving over 470 operational and development tickets significantly enhanced system reliability and performance. I also designed and implemented APIs, created and managed over 100 database objects, and administered critical database operations, including user creation, role assignments, and permission settings. My contributions were recognized with STAR and XTRA MILE awards for exceptional performance and dedication.`,
+export const PROJECTS1 = [
   {
     title: "E-Commerce Website",
     image: project1,
@@ -68,9 +48,46 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
   },
 ];
+export const PROJECTS = [
+  {
+    title: "Masmovil (IFS Financials ERP Application)",
+    image: project1,  // Replace with actual image variable or URL
+    description:
+      "Enhanced ERP system performance and user efficiency through strategic software optimizations and cross-functional collaborations. Mentored team members and provided essential on-call support to ensure high system reliability with minimal downtime.",
+    technologies: ["SQL", "PL/SQL", "Oracle", "ERP"],
+  },
+  {
+    title: "Pneumonia Detection System using CNN",
+    image: project2,  // Replace with actual image variable or URL
+    description:
+      "Developed a CNN-based tool for analyzing chest X-ray images to enhance diagnostic accuracy. Integrated the model into a user-friendly Gradio UI, achieving a 95% accuracy rate.",
+    technologies: ["Python", "TensorFlow", "Keras", "Gradio"],
+  },
+  {
+    title: "Trade What You Read (Google's Startup Weekend)",
+    image: project3,  // Replace with actual image variable or URL
+    description:
+      "Developed a prototype for a platform allowing users to trade books. Led the team to 3rd place at Google’s Startup Weekend, recognized for innovation and market impact.",
+    technologies: ["Entrepreneurship", "Teamwork", "Prototyping","Startup Culture"],
+  },
+  {
+    title: "Portfolio Website",
+    image: project4,
+    description:
+      "A personal portfolio website showcasing projects, skills, and contact information.",
+    technologies: ["HTML", "CSS", "React", "Tailwind","Vercel","Framer motion"],
+  },
+  {
+    title: "Weather App",
+    image: project5,
+    description:
+      "Simple weather application built using React that allows users to search for a city's weather. It fetches real-time weather data from the OpenWeatherMap API and displays it in a clean, user-friendly interface. The temperature is displayed in Celsius along with other weather details like wind speed and humidity.",
+    technologies: ["HTML","CSS","React", "Web API"],
+  },
+];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "3351 Quartz ln, APT G04 ",
+  phoneNo: "(657)525-9667 ",
+  email: "naikaj18@gmail.com",
 };
