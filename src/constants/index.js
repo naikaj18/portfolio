@@ -4,11 +4,12 @@ import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.jpg";
 
-export const HERO_CONTENT = `Welcome to my portfolio! I’m Naikaj Jayant Shiradkar, a computer science professional with a deep passion for technology and innovation. My journey in this field began with a fascination for how things work and a relentless curiosity to create and improve solutions that make a difference.
+export const HERO_CONTENT = `Hi there! I’m Naikaj Jayant Shiradkar. Ever since I can remember, I’ve been fascinated by how things work, which naturally led me into the world of technology. My journey has been shaped by a deep curiosity and a drive to create solutions that truly make a difference.
 
-With a Master’s degree from California State University, Fullerton, and hands-on experience as a Senior Analyst at Capgemini, I’ve developed a strong foundation in software development and database management. I’m driven by a belief that technology has the power to solve real-world problems and improve lives, which motivates me in every project I undertake.
+I earned my Master’s degree in Computer Science from California State University, Fullerton, and spent some valuable years as a Senior Analyst at Capgemini, where I honed my skills in software development and database management. What really drives me is the belief that technology can solve real-world problems and improve lives, and that’s what I strive to do in every project I take on.
 
-Whether it’s developing algorithms, mentoring team members, or exploring the latest advancements in machine learning, I’m constantly motivated by the impact my work can have. I also enjoy staying at the forefront of technological trends, participating in hackathons, and contributing to open-source projects.
+Whether it’s developing algorithms or exploring the latest trends in machine learning, I’m always excited about the impact my work can have. I’m passionate about staying up to date with new technologies and constantly seeking ways to apply my knowledge to make a positive difference.
+
 `;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
