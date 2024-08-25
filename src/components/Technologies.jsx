@@ -67,15 +67,15 @@ const Technologies = () => {
                     <TbSql className="text-7xl text-red-500" />
                 </motion.div>
                 <motion.p
-                whileInView={{opacity:1,x:0}}
-                initial={{opacity:0,x:60}}
-                transition={{duration:1.5}}
+                // whileInView={{opacity:1,x:0}}
+                // initial={{opacity:0,x:60}}
+                // transition={{duration:1.5}}
                 className="mt-10 text-center text-xl font-light tracking-tight"><span className="font-bold bg-gradient-to-r from-cyan-100 via-yellow-100 to-red-200 bg-clip-text tracking-tight text-transparent" >Languages / Frameworks:</span> Oracle PL/SQL, SQL, Python, Java, HTML, CSS, JavaScript, React, Node.js,
                     React Native, Keras, TensorFlow, Tailwind.</motion.p>
                 <motion.p
-                whileInView={{opacity:1,x:0}}
-                initial={{opacity:0,x:60}}
-                transition={{duration:1.5}}
+                // whileInView={{opacity:1,x:0}}
+                // initial={{opacity:0,x:60}}
+                // transition={{duration:1.5}}
                 className="mt-10 text-center text-xl font-light tracking-tight"><span className="font-bold bg-gradient-to-r from-cyan-100 via-yellow-50 to-red-100 bg-clip-text tracking-tight text-transparent">Skills:</span> Data Structures and Algorithms, Git/GitHub, DBMS, Machine Learning, ANN, CNN, Agile Practices,
                    CI/CD, UI/UX design principles, Figma, Docker, Kubernetes.</motion.p>
             </motion.div>
