@@ -93,7 +93,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "3351 Quartz ln, APT G04 ",
+  address: "3351 Quartz ln, APT G04, Fullerton, California - 92831",
   phoneNo: "(657)525-9667 ",
   email: "naikaj18@gmail.com",
 };
