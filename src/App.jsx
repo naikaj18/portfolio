@@ -14,7 +14,6 @@ export default function App() {
       <div className="container mx-auto px-8">
         <Navbar/>
         <Hero/>
-        {/* <About/> */}
         <Technologies/>
         <Experience/>
         <Projects/>
