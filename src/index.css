@@ -4,5 +4,93 @@
 @tailwind utilities;
 
 :root {
-  font-family : "Inter",sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Status pill pulse animation */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Subtle hero background orbs */
+@keyframes orb-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(18px, -24px) scale(1.04); }
+}
+
+@keyframes orb-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-14px, 20px) scale(1.03); }
+}
+
+@keyframes orb-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(10px, 12px) scale(1.02); }
+  66% { transform: translate(-8px, -10px) scale(0.98); }
+}
+
+.orb-1 { animation: orb-float-1 14s ease-in-out infinite; }
+.orb-2 { animation: orb-float-2 18s ease-in-out infinite; }
+.orb-3 { animation: orb-float-3 22s ease-in-out infinite; }
+
+/* Experience block hover */
+.experience-block {
+  transition: background 0.2s ease;
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  margin: -1.25rem -1rem;
+}
+
+.experience-block:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dark .experience-block:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Project card premium shadow */
+.project-card {
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09), 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section label refined tracking */
+.section-label {
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+}
+
+/* Photo ring layers */
+.photo-ring {
+  box-shadow:
+    0 0 0 1px rgba(210, 210, 215, 0.8),
+    0 0 0 5px rgba(245, 245, 247, 0.9),
+    0 0 0 6px rgba(210, 210, 215, 0.4),
+    0 8px 32px rgba(0, 0, 0, 0.10),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Contact section link underline on hover */
+.contact-email-link {
+  transition: opacity 0.2s ease;
+}
+.contact-email-link:hover {
+  opacity: 0.85;
 }

@@ -1,45 +1,69 @@
-import React from 'react'
-import { EXPERIENCES } from '../constants'
+import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const Experience = () => {
-    return (
-        <div className='border-b border-neutral-900 pb-4'>
-            <motion.h2
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.5 }}
-                className='my-20 text-center text-4xl'>Experience</motion.h2>
-            <div>
-                {EXPERIENCES.map((experience, index) => (
-                    <div
-                        key={index}
-                        className='mb-8 flex flex-wrap lg:justify-center'>
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1.5 }}
-                            className='w-full lg:w-1/4'>
-                            <p className='mb-2 max-2-xl text-xl text-neutral-400'>{experience.year}</p>
-                        </motion.div>
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1.5 }}
-                            className='w-full max-2-xl lg:w-3/4'>
-                            <h6 className='mb-2 max-2-xl text-xl font-semibold'>{experience.role} - <span className=' text-purple-100'>{experience.company}</span></h6>
-                            <p className='mb-4 text-neutral-400'>{experience.description}</p>
-                            {experience.technologies.map((tech, index) => (
-                                <span
-                                    key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-3 py-1 font-medium text-purple-700 inline-flex flex-wrap'>{tech}</span>
-                            ))}
-                        </motion.div>
-                    </div>
-                ))}
+  const { isDark } = useTheme();
+  return (
+    <section id="experience" className="py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
+      <motion.p
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 10 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="section-label uppercase text-[#6e6e73] dark:text-[#98989d] mb-12"
+      >
+        02 — Experience
+      </motion.p>
+
+      <div className="space-y-10">
+        {EXPERIENCES.map((experience, index) => (
+          <motion.div
+            key={index}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="experience-block grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-8"
+          >
+            <div className="lg:col-span-1 pt-1">
+              <p className="text-xs text-[#6e6e73] dark:text-[#98989d] leading-relaxed tabular-nums">{experience.year}</p>
             </div>
-        </div>
+            <div className="lg:col-span-3">
+              <h3 className="text-base font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-0.5">
+                {experience.role}
+                {experience.type && (
+                  <span className="ml-2 text-xs font-normal text-[#6e6e73] dark:text-[#98989d]">({experience.type})</span>
+                )}
+              </h3>
+              <p className="text-sm text-[#6e6e73] dark:text-[#98989d] mb-4 font-medium">{experience.company}</p>
+              <ul className="space-y-3 mb-5">
+                {experience.description.map((point, i) => (
+                  <li
+                    key={i}
+                    className="text-sm text-[#1d1d1f] dark:text-[#f5f5f7] leading-relaxed pl-3.5"
+                    style={{ borderLeft: `1.5px solid ${isDark ? "#3a3a3c" : "#c7c7cc"}` }}
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2">
+                {experience.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-xs px-2.5 py-1 rounded-full bg-white dark:bg-[#2c2c2e] border border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
-    )
-}
-
-export default Experience
+export default Experience;

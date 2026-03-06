@@ -1,86 +1,73 @@
-import { RiReactjsLine } from "react-icons/ri"
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaPython } from "react-icons/fa";
-import { TbBrandReactNative } from "react-icons/tb";
-import { TbSql } from "react-icons/tb";
+import { SKILLS } from "../constants";
 import { motion } from "framer-motion";
 
-const iconVariants = (duration) => ({
-    initial: { y: -10 },
-    animate: {
-        y: [10, -10],
-        transition: {
-            duration: duration,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
-        }
-    }
-})
+// Subtle tint per category so groups feel visually distinct without color
+const CATEGORY_STYLES = {
+  "Languages & Frameworks": {
+    pill: "bg-white dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
+    container: "bg-white/50 dark:bg-[#1c1c1e]/60 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+  },
+  "AI / ML": {
+    pill: "bg-[#f0f0f5] dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
+    container: "bg-[#f7f7fa]/60 dark:bg-[#1c1c1e]/40 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+  },
+  "Cloud & DevOps": {
+    pill: "bg-white dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
+    container: "bg-white/30 dark:bg-[#1c1c1e]/30 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+  },
+};
+
+const fallbackStyle = {
+  pill: "bg-white dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
+  container: "bg-white/40 dark:bg-[#1c1c1e]/40 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+};
 
 const Technologies = () => {
-    return (
-        <div className="border-b border-neutral-800 pb-24">
-            <motion.div
-            whileInView={{opacity:1, y:0}}
-            initial={{opacity:0,y:-100}}
-            transition={{duration:1.5}}
-            className="my-20 text-center text-4xl font-bold bg-gradient-to-r from-cyan-400 via-yellow-100 to-red-800 bg-clip-text tracking-tight text-transparent">Technologies</motion.div>
-            <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 1.5 }}
-                className="flex flex-wrap flex-center justify-center gap-4 items-center">
-                <motion.div
-                    variants={iconVariants(2.5)}
-                    initial="initial"
-                    animate="animate"
-                    className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <RiReactjsLine className="text-7xl text-[rgb(97,219,251)]" />
-                </motion.div>
-                <motion.div
-                    variants={iconVariants(3)}
-                    initial="initial"
-                    animate="animate"
-                    className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <RiTailwindCssFill className="text-7xl text-white " />
-                </motion.div>
-                <motion.div
-                    variants={iconVariants(3.5)}
-                    initial="initial"
-                    animate="animate"
-                    className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <FaPython className="text-7xl text-[rgb(255,222,87)]" />
-                </motion.div>
-                <motion.div
-                    variants={iconVariants(2.5)}
-                    initial="initial"
-                    animate="animate"
-                    className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <TbBrandReactNative className="text-7xl text-[rgb(97,219,251)] " />
-                </motion.div>
-                <motion.div
-                    variants={iconVariants(2.5)}
-                    initial="initial"
-                    animate="animate"
-                    className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <TbSql className="text-7xl text-red-500" />
-                </motion.div>
-                <motion.p
-                // whileInView={{opacity:1,x:0}}
-                // initial={{opacity:0,x:60}}
-                // transition={{duration:1.5}}
-                className="mt-10 text-center text-xl font-light tracking-tight"><span className="font-bold bg-gradient-to-r from-cyan-100 via-yellow-100 to-red-200 bg-clip-text tracking-tight text-transparent" >Languages / Frameworks:</span> Oracle PL/SQL, SQL, Python, Java, HTML, CSS, JavaScript, React, Node.js,
-                    React Native, Keras, TensorFlow, Tailwind.</motion.p>
-                <motion.p
-                // whileInView={{opacity:1,x:0}}
-                // initial={{opacity:0,x:60}}
-                // transition={{duration:1.5}}
-                className="mt-10 text-center text-xl font-light tracking-tight"><span className="font-bold bg-gradient-to-r from-cyan-100 via-yellow-50 to-red-100 bg-clip-text tracking-tight text-transparent">Skills:</span> Data Structures and Algorithms, Git/GitHub, DBMS, Machine Learning, ANN, CNN, Agile Practices,
-                   CI/CD, UI/UX design principles, Figma, Docker, Kubernetes.</motion.p>
-            </motion.div>
-        </div>
-    )
-}
+  return (
+    <section id="skills" className="py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
+      <motion.p
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 10 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="section-label uppercase text-[#6e6e73] dark:text-[#98989d] mb-12"
+      >
+        03 — Skills
+      </motion.p>
 
-export default Technologies
+      <div className="space-y-4">
+        {Object.entries(SKILLS).map(([category, skills], index) => {
+          const style = CATEGORY_STYLES[category] || fallbackStyle;
+          return (
+            <motion.div
+              key={category}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 lg:grid-cols-4 gap-3 lg:gap-8 lg:items-start"
+            >
+              <div className="lg:col-span-1 pt-1 lg:pt-5">
+                <p className="text-xs font-medium text-[#6e6e73] dark:text-[#98989d]">{category}</p>
+              </div>
+              <div className={`lg:col-span-3 ${style.container}`}>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className={`text-xs px-2.5 py-1 rounded-full border ${style.pill}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+export default Technologies;

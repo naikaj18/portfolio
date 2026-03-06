@@ -1,99 +1,76 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
-import project5 from "../assets/projects/project-5.jpg";
+export const HERO_CONTENT = `I build production AI systems — RAG pipelines, agentic frameworks, and cloud infrastructure — that go from prototype to deployed and monitored in the real world.`;
 
-export const HERO_CONTENT = `Hi there! I’m Naikaj Jayant Shiradkar. Ever since I can remember, I’ve been fascinated by how things work, which naturally led me into the world of technology. My journey has been shaped by a deep curiosity and a drive to create solutions that truly make a difference.
-
-I earned my Master’s degree in Computer Science from California State University, Fullerton, and spent some valuable years as a Senior Analyst at Capgemini, where I honed my skills in software development and database management. What really drives me is the belief that technology can solve real-world problems and improve lives, and that’s what I strive to do in every project I take on.
-
-Whether it’s developing algorithms or exploring the latest trends in machine learning, I’m always excited about the impact my work can have. I’m passionate about staying up to date with new technologies and constantly seeking ways to apply my knowledge to make a positive difference.
-
-`;
-
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I'm an AI and Cloud Engineer who ships production systems, not just prototypes. At AAA, I'm building agentic insurance chatbots on AWS Bedrock — complete with semantic caching, guardrail monitoring, and multi-region observability. Before that, I delivered a full RAG pipeline at Dreamline AI using FAISS and SageMaker, and built analytics infrastructure at Capgemini that reduced manual reporting by 20%. I hold an MS in Computer Science (GPA 3.74) and an AWS Certified Developer credential. I care about systems that are fast, observable, and actually maintained.`;
 
 export const EXPERIENCES = [
   {
-    year: "Jan 2020 - July 2022",
-    role: "Senior Analyst",
+    year: "Jun 2025 – Present",
+    role: "AI / Cloud Engineer",
+    company: "Auto Club Enterprises (AAA)",
+    type: "Contractor",
+    description: [
+      "Architected production AI chatbots for insurance and emergency roadside services on AWS Bedrock, combining Strands-based agentic frameworks with RAG pipelines to deliver context-aware responses across multiple product lines.",
+      "Engineered semantic caching within Lambda-backed Bedrock invocation flows, eliminating redundant LLM API calls and measurably reducing inference costs across dev, staging, and production environments.",
+      "Built end-to-end observability infrastructure using AWS CDK, CloudWatch, CloudTrail, and SNS — enabling real-time monitoring of Bedrock API usage and guardrail violations across multi-region deployments.",
+      "Provisioned and maintained cloud infrastructure via AWS CDK and YAML-based CI/CD pipelines, delivering Lambda functions, Step Functions, S3 buckets, and DynamoDB tables as production-grade IaC.",
+    ],
+    technologies: ["AWS Bedrock", "Python", "Lambda", "DynamoDB", "AWS CDK", "RAG", "Strands Agents"],
+  },
+  {
+    year: "Jun 2024 – Jun 2025",
+    role: "AI / Full Stack Developer",
+    company: "Dreamline AI",
+    type: "",
+    description: [
+      "Built and deployed a RAG Q&A chatbot for the GreenZone Mapping platform — combining OpenAI embeddings, FAISS vector search, and Mistral 7B hosted on AWS SageMaker to answer geospatial and energy questions with grounded, source-cited responses.",
+      "Owned the full stack: React frontend, FastAPI backend, and AWS-deployed infrastructure with YAML-based CI/CD pipelines — from local development to production release.",
+      "Designed a SQL Server schema unifying geographic, demographic, property, and energy datasets, enabling structured cross-domain queries that powered the platform's core analytics.",
+    ],
+    technologies: ["Python", "FastAPI", "React", "AWS SageMaker", "FAISS", "OpenAI", "SQL Server"],
+  },
+  {
+    year: "Jan 2020 – Jul 2022",
+    role: "Senior Software Developer",
     company: "Capgemini",
-    description: `Led a team in optimizing SQL queries and automating 70% of monitoring tasks. Resolved 470+ tickets, improving system reliability. Designed APIs and managed 100+ database objects. Recognized with STAR and XTRA MILE awards.`,
-    technologies: ["PLSQL", "SQL", "IFS", "Java"],
-  }
-];
-// description: `As a Senior Analyst at Capgemini, I played a crucial role in driving efficiency and reliability across Development, Operations, and Administration teams. I spearheaded the development and optimization of SQL queries, procedures, and scripts, successfully automating 70% of routine monitoring tasks. My proactive approach in resolving over 470 operational and development tickets significantly enhanced system reliability and performance. I also designed and implemented APIs, created and managed over 100 database objects, and administered critical database operations, including user creation, role assignments, and permission settings. My contributions were recognized with STAR and XTRA MILE awards for exceptional performance and dedication.`,
-export const PROJECTS1 = [
-  {
-    title: "E-Commerce Website",
-    image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    type: "",
+    description: [
+      "Optimized 100+ enterprise database objects — stored procedures, queries, and indexes — reducing average query execution time by 25% across a large-scale PL/SQL environment.",
+      "Delivered a full-stack analytics dashboard (Django REST + React, deployed on AWS EC2 and PostgreSQL) that eliminated 20% of manual reporting effort for the operations team.",
+      "Recognized with Capgemini's STAR and XTRA MILE awards for outstanding contributions to application architecture and database performance improvement.",
+    ],
+    technologies: ["Python", "Django", "React", "PostgreSQL", "SQL", "PL/SQL", "AWS EC2"],
   },
 ];
+
+export const SKILLS = {
+  "Languages & Frameworks": ["Python", "React.js", "TypeScript", "JavaScript", "FastAPI", "Django", "SQL", "PL/SQL", "React Native", "Tailwind CSS"],
+  "AI / ML": ["AWS Bedrock", "Strands Agents", "RAG Pipelines", "Prompt Engineering", "FAISS", "SageMaker", "Scikit-learn", "NumPy", "Pandas", "NLP"],
+  "Cloud & DevOps": ["AWS CDK", "Lambda", "DynamoDB", "CloudWatch", "S3", "Step Functions", "Docker", "CI/CD", "GitHub", "Linux"],
+};
+
 export const PROJECTS = [
   {
-    title: "Masmovil (IFS Financials ERP Application)",
-    image: project1,  // Replace with actual image variable or URL
-    description:
-      "Enhanced ERP system performance and user efficiency through strategic software optimizations and cross-functional collaborations. Mentored team members and provided essential on-call support to ensure high system reliability with minimal downtime.",
-    technologies: ["SQL", "PL/SQL", "Oracle", "ERP"],
+    title: "Mailliam",
+    subtitle: "AI-Powered Email Summarization Assistant",
+    description: "Personal AI assistant that connects to Gmail via OAuth, fetches and classifies emails, and generates retrieval-augmented summaries using context-aware LLM prompting. Built with FastAPI and Supabase — designed to cut time-to-inbox-zero and surface what actually matters.",
+    technologies: ["Python", "FastAPI", "React", "LLMs", "Gmail API", "Supabase", "RAG"],
   },
   {
-    title: "Pneumonia Detection System using CNN",
-    image: project2,  // Replace with actual image variable or URL
-    description:
-      "Developed a CNN-based tool for analyzing chest X-ray images to enhance diagnostic accuracy. Integrated the model into a user-friendly Gradio UI, achieving a 95% accuracy rate.",
-    technologies: ["Python", "TensorFlow", "Keras", "Gradio"],
+    title: "Masmovil",
+    subtitle: "IFS Financials ERP Application",
+    description: "Enterprise ERP development for Masmovil (Spain's fourth-largest telecom) on the IFS Financials platform. Designed and optimized 100+ database objects, built PL/SQL APIs for financial data workflows, and maintained system reliability for a business operating at national scale.",
+    technologies: ["SQL", "PL/SQL", "Oracle", "ERP", "APIs"],
   },
   {
-    title: "Trade What You Read (Google's Startup Weekend)",
-    image: project3,  // Replace with actual image variable or URL
-    description:
-      "Developed a prototype for a platform allowing users to trade books. Led the team to 3rd place at Google’s Startup Weekend, recognized for innovation and market impact.",
-    technologies: ["Entrepreneurship", "Teamwork", "Prototyping","Startup Culture"],
-  },
-  {
-    title: "Portfolio Website",
-    image: project4,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Tailwind","Vercel","Framer motion"],
-  },
-  {
-    title: "Weather App",
-    image: project5,
-    description:
-      "Simple weather application built using React that allows users to search for a city's weather. It fetches real-time weather data from the OpenWeatherMap API and displays it in a clean, user-friendly interface. The temperature is displayed in Celsius along with other weather details like wind speed and humidity.",
-    technologies: ["HTML","CSS","React", "Web API"],
+    title: "Trade What You Read",
+    subtitle: "Google's Startup Weekend — 3rd Place",
+    description: "Conceived and prototyped a peer-to-peer book trading platform in 54 hours at Google's Startup Weekend. Led the team from idea to pitch, winning 3rd place out of all competing teams — judged on innovation, feasibility, and market potential.",
+    technologies: ["Entrepreneurship", "Prototyping", "Product Strategy"],
   },
 ];
 
 export const CONTACT = {
-  address: "3351 Quartz ln, APT G04, Fullerton, California - 92831",
-  phoneNo: "(657)525-9667 ",
+  location: "San Francisco, California",
+  phoneNo: "+1 (657) 525-9667",
   email: "naikaj18@gmail.com",
 };

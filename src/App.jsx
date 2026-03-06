@@ -1,24 +1,29 @@
-import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
 import About from "./components/About"
-import Technologies from "./components/Technologies"
 import Experience from "./components/Experience"
+import Technologies from "./components/Technologies"
 import Projects from "./components/Projects"
+import Education from "./components/Education"
 import Contact from "./components/Contact"
+import ProgressBar from "./components/ProgressBar"
+import Stats from "./components/Stats"
+
 export default function App() {
   return (
-    <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
-      <div className="fixed top-0 -z-10 h-full w-full">
-        <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-      </div>
-      <div className="container mx-auto px-8">
-        <Navbar/>
-        <Hero/>
-        <Technologies/>
-        <Experience/>
-        <Projects/>
-        <Contact/>
-        </div>
+    <div className="bg-[#f5f5f7] dark:bg-black text-[#1d1d1f] dark:text-[#f5f5f7] antialiased selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-900 dark:selection:text-blue-100">
+<ProgressBar />
+      <Navbar />
+      <main className="mx-auto max-w-5xl px-4 lg:px-8">
+        <Hero />
+        <Stats />
+        <About />
+        <Experience />
+        <Technologies />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
     </div>
   )
 }
