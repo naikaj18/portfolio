@@ -9,7 +9,7 @@ const About = () => {
         initial={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="section-label uppercase text-[#6e6e73] dark:text-[#98989d] mb-6"
+        className="section-label uppercase mb-6"
       >
         01 — About
       </motion.p>

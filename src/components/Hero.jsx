@@ -1,6 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/Naikaj.jpg";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 // Word-by-word reveal — avoids mid-word line breaks
 const TypewriterText = ({ text, className }) => {
@@ -42,27 +43,17 @@ const TypewriterText = ({ text, className }) => {
 };
 
 const Hero = () => {
+  const { isDark } = useTheme();
+
+  const nameGradient = isDark
+    ? "linear-gradient(180deg, #ffffff 0%, #a0a0a5 100%)"
+    : "linear-gradient(180deg, #1d1d1f 0%, #3d3d3f 100%)";
+
   return (
     <section className="py-24 lg:py-36 relative">
 
-      {/* Subtle ambient orbs — purely decorative, very faint */}
-      <div
-        aria-hidden="true"
-        className="orb-1 absolute top-10 right-[-60px] w-72 h-72 rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(180,180,190,0.13) 0%, transparent 70%)" }}
-      />
-      <div
-        aria-hidden="true"
-        className="orb-2 absolute bottom-0 left-[-80px] w-96 h-96 rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(160,160,175,0.10) 0%, transparent 70%)" }}
-      />
-      <div
-        aria-hidden="true"
-        className="orb-3 absolute top-1/2 left-1/2 w-80 h-80 rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(200,200,210,0.07) 0%, transparent 70%)", transform: "translate(-50%, -50%)" }}
-      />
 
-      <div className="flex flex-col-reverse lg:flex-row lg:items-start lg:gap-20 relative">
+      <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:gap-20 relative">
 
         {/* Text content */}
         <div className="flex-1 mt-10 lg:mt-0">
@@ -75,7 +66,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white/70 dark:bg-white/[0.08] backdrop-blur-sm mb-6"
           >
             <span
-              className="pulse-dot w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"
+              className="pulse-dot w-1.5 h-1.5 rounded-full shrink-0"
               aria-hidden="true"
             />
             <span className="text-xs text-[#1d1d1f] dark:text-[#f5f5f7] font-medium tracking-tight">
@@ -87,16 +78,22 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            className="section-label uppercase text-[#6e6e73] dark:text-[#98989d] mb-4"
+            className="section-label uppercase mb-4"
           >
-            AI &amp; Cloud Engineer
+            AI, Cloud &amp; Full Stack Engineer
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="text-5xl lg:text-6xl font-semibold tracking-tight text-[#1d1d1f] dark:text-[#f5f5f7] leading-tight mb-6"
+            className="text-6xl lg:text-8xl font-semibold tracking-tight leading-tight mb-6"
+            style={{
+              backgroundImage: nameGradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
           >
             Naikaj Shiradkar
           </motion.h1>
@@ -104,7 +101,7 @@ const Hero = () => {
           {/* Typewriter tagline */}
           <TypewriterText
             text={HERO_CONTENT}
-            className="text-lg text-[#6e6e73] dark:text-[#98989d] max-w-md leading-relaxed mb-10"
+            className="text-lg lg:text-xl text-[#6e6e73] dark:text-[#98989d] max-w-md leading-relaxed mb-10"
           />
 
           <motion.div
@@ -130,11 +127,11 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.65, delay: 0.18 }}
-          className="flex-shrink-0 lg:w-64"
+          className="flex-shrink-0 lg:w-96"
         >
           <motion.div
             whileHover={{ scale: 1.03, transition: { duration: 0.3, ease: "easeOut" } }}
-            className="photo-ring w-56 lg:w-72 rounded-3xl overflow-hidden"
+            className="photo-ring w-56 lg:w-96 rounded-3xl overflow-hidden"
             style={{ aspectRatio: "3/4" }}
           >
             <img

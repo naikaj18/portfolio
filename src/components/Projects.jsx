@@ -13,7 +13,7 @@ const Projects = () => {
         initial={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="section-label uppercase text-[#6e6e73] dark:text-[#98989d] mb-12"
+        className="section-label uppercase mb-12"
       >
         04 — Projects
       </motion.p>
@@ -39,8 +39,9 @@ const Projects = () => {
               transitionSpeed={500}
               className="project-card rounded-2xl"
             >
+              {/* project-card-inner carries the accent left-border on hover */}
               <div
-                className="project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-[#3a3a3c] cursor-default overflow-hidden"
+                className="project-card-inner project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-[#3a3a3c] cursor-default overflow-hidden"
                 style={{
                   background: isDark
                     ? "linear-gradient(160deg, #1c1c1e 0%, #161618 100%)"
@@ -60,7 +61,10 @@ const Projects = () => {
                       className="text-[#6e6e73] dark:text-[#98989d] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     />
                   </h3>
-                  <span className="text-xs text-[#6e6e73] dark:text-[#98989d] ml-4 mt-0.5 shrink-0 tabular-nums">
+                  <span
+                    className="text-xs ml-4 mt-0.5 shrink-0 tabular-nums font-semibold"
+                    style={{ color: "var(--accent)" }}
+                  >
                     0{index + 1}
                   </span>
                 </div>

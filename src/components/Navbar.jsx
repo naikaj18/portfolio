@@ -43,7 +43,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-5xl px-4 lg:px-8 flex items-center justify-between py-4">
+      <nav className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 flex items-center justify-between py-4">
         {/* Name */}
         <a href="#" className="text-sm font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight" aria-label="Go to top">
           Naikaj Shiradkar
@@ -67,7 +67,8 @@ const Navbar = () => {
                 {label}
                 {isActive && (
                   <span
-                    className="absolute -bottom-0.5 left-0 right-0 h-px bg-[#1d1d1f] dark:bg-[#f5f5f7] rounded-full"
+                    className="absolute -bottom-0.5 left-0 right-0 h-px rounded-full"
+                    style={{ background: "var(--accent)" }}
                     aria-hidden="true"
                   />
                 )}

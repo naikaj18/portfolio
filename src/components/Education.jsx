@@ -19,7 +19,7 @@ const Education = () => {
         initial={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="section-label uppercase text-[#6e6e73] dark:text-[#98989d] mb-12"
+        className="section-label uppercase mb-12"
       >
         05 — Education &amp; Certification
       </motion.p>
@@ -47,7 +47,7 @@ const Education = () => {
               className="project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-[#3a3a3c] h-full"
               style={cardStyle}
             >
-              <p className="section-label text-[#6e6e73] dark:text-[#98989d] mb-3 uppercase">Master of Computer Science</p>
+              <p className="section-label mb-3 uppercase">Master of Computer Science</p>
               <h3 className="text-base font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-1.5">California State University, Fullerton</h3>
               <p className="text-sm text-[#6e6e73] dark:text-[#98989d]">GPA: 3.74</p>
             </div>
@@ -76,7 +76,7 @@ const Education = () => {
               className="project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-[#3a3a3c] h-full"
               style={cardStyle}
             >
-              <p className="section-label text-[#6e6e73] dark:text-[#98989d] mb-3 uppercase">Certification</p>
+              <p className="section-label mb-3 uppercase">Certification</p>
               <h3 className="text-base font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-1.5">AWS Certified Developer</h3>
               <p className="text-sm text-[#6e6e73] dark:text-[#98989d]">Associate — Amazon Web Services</p>
             </div>

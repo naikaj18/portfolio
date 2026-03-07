@@ -11,12 +11,13 @@ const Experience = () => {
         initial={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="section-label uppercase text-[#6e6e73] dark:text-[#98989d] mb-12"
+        className="section-label uppercase mb-12"
       >
         02 — Experience
       </motion.p>
 
-      <div className="space-y-10">
+      {/* Timeline wrapper — thin vertical line on desktop */}
+      <div className="experience-timeline space-y-10 lg:pl-6">
         {EXPERIENCES.map((experience, index) => (
           <motion.div
             key={index}
