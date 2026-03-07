@@ -1,7 +1,9 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/Naikaj.jpg";
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 import { useTheme } from "../context/ThemeContext";
+import MagneticWrapper from "./MagneticWrapper";
 
 // Word-by-word reveal — avoids mid-word line breaks
 const TypewriterText = ({ text, className }) => {
@@ -110,12 +112,14 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.32 }}
             className="flex flex-wrap items-center gap-3"
           >
-            <a
-              href="mailto:naikaj18@gmail.com"
-              className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
-            >
-              Get in touch
-            </a>
+            <MagneticWrapper>
+              <a
+                href="mailto:naikaj18@gmail.com"
+                className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
+              >
+                Get in touch
+              </a>
+            </MagneticWrapper>
             <span className="text-xs text-[#6e6e73] dark:text-[#98989d] border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white/60 dark:bg-transparent rounded-full px-3.5 py-1.5 backdrop-blur-sm">
               AWS Certified Developer – Associate
             </span>
@@ -129,18 +133,30 @@ const Hero = () => {
           transition={{ duration: 0.65, delay: 0.18 }}
           className="flex-shrink-0 lg:w-96"
         >
-          <motion.div
-            whileHover={{ scale: 1.03, transition: { duration: 0.3, ease: "easeOut" } }}
-            className="photo-ring w-56 lg:w-96 rounded-3xl overflow-hidden"
-            style={{ aspectRatio: "3/4" }}
+          <Tilt
+            tiltMaxAngleX={8}
+            tiltMaxAngleY={8}
+            perspective={1000}
+            glareEnable={true}
+            glareMaxOpacity={0.1}
+            glareColor="#ffffff"
+            glarePosition="all"
+            scale={1.03}
+            transitionSpeed={500}
+            className="w-56 lg:w-96 rounded-3xl"
           >
-            <img
-              src={profilePic}
-              alt="Naikaj Shiradkar"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: "center 8%", filter: "grayscale(15%) brightness(1.03) contrast(0.97)" }}
-            />
-          </motion.div>
+            <div
+              className="photo-ring rounded-3xl overflow-hidden"
+              style={{ aspectRatio: "3/4" }}
+            >
+              <img
+                src={profilePic}
+                alt="Naikaj Shiradkar"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center 8%", filter: "grayscale(15%) brightness(1.03) contrast(0.97)" }}
+              />
+            </div>
+          </Tilt>
         </motion.div>
 
       </div>

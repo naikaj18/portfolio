@@ -1,6 +1,7 @@
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 import { Linkedin, Github, Mail } from "lucide-react";
+import MagneticWrapper from "./MagneticWrapper";
 
 const Contact = () => {
   return (
@@ -53,34 +54,40 @@ const Contact = () => {
           viewport={{ once: true }}
           className="flex flex-wrap items-center gap-3 mb-16"
         >
-          <a
-            href={`mailto:${CONTACT.email}`}
-            aria-label="Send email to Naikaj"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
-          >
-            <Mail size={14} aria-hidden="true" />
-            {CONTACT.email}
-          </a>
-          <a
-            href="https://linkedin.com/in/naikaj"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit LinkedIn profile"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white dark:bg-[#1c1c1e] text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-[#f5f5f7] transition-colors duration-200"
-          >
-            <Linkedin size={15} aria-hidden="true" />
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/naikaj18"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit GitHub profile"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white dark:bg-[#1c1c1e] text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-[#f5f5f7] transition-colors duration-200"
-          >
-            <Github size={15} aria-hidden="true" />
-            GitHub
-          </a>
+          <MagneticWrapper>
+            <a
+              href={`mailto:${CONTACT.email}`}
+              aria-label="Send email to Naikaj"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
+            >
+              <Mail size={14} aria-hidden="true" />
+              {CONTACT.email}
+            </a>
+          </MagneticWrapper>
+          <MagneticWrapper>
+            <a
+              href="https://linkedin.com/in/naikaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit LinkedIn profile"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white dark:bg-[#1c1c1e] text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-[#f5f5f7] transition-colors duration-200"
+            >
+              <Linkedin size={15} aria-hidden="true" />
+              LinkedIn
+            </a>
+          </MagneticWrapper>
+          <MagneticWrapper>
+            <a
+              href="https://github.com/naikaj18"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit GitHub profile"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white dark:bg-[#1c1c1e] text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-[#f5f5f7] transition-colors duration-200"
+            >
+              <Github size={15} aria-hidden="true" />
+              GitHub
+            </a>
+          </MagneticWrapper>
         </motion.div>
 
         {/* Footer divider + copyright */}
