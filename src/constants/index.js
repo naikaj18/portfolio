@@ -38,7 +38,7 @@ export const EXPERIENCES = [
       "Delivered a full-stack analytics dashboard (Django REST + React, deployed on AWS EC2 and PostgreSQL) that eliminated 20% of manual reporting effort for the operations team.",
       "Recognized with Capgemini's STAR and XTRA MILE awards for outstanding contributions to application architecture and database performance improvement.",
     ],
-    technologies: ["Python", "Django", "React", "PostgreSQL", "SQL", "PL/SQL", "AWS EC2"],
+    technologies: ["Python", "Django", "React", "PostgreSQL", "SQL", "PL/SQL"],
   },
 ];
 
