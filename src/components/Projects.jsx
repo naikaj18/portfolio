@@ -54,12 +54,30 @@ const Projects = () => {
                 {/* Title row */}
                 <div className="flex items-start justify-between mb-1 group">
                   <h3 className="text-base font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] flex items-center gap-2">
-                    {project.title}
-                    <ArrowUpRight
-                      aria-hidden="true"
-                      size={15}
-                      className="text-[#6e6e73] dark:text-[#98989d] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    />
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                      >
+                        {project.title}
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          size={15}
+                          className="text-[#6e6e73] dark:text-[#98989d] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
+                      </a>
+                    ) : (
+                      <>
+                        {project.title}
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          size={15}
+                          className="text-[#6e6e73] dark:text-[#98989d] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
+                      </>
+                    )}
                   </h3>
                   <span
                     className="text-xs ml-4 mt-0.5 shrink-0 tabular-nums font-semibold"

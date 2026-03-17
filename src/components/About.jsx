@@ -13,15 +13,22 @@ const About = () => {
       >
         01 — About
       </motion.p>
-      <motion.p
+      <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-lg lg:text-xl font-normal text-[#1d1d1f] dark:text-[#f5f5f7] leading-relaxed"
+        className="space-y-5"
       >
-        {ABOUT_TEXT}
-      </motion.p>
+        {ABOUT_TEXT.map((paragraph, i) => (
+          <p
+            key={i}
+            className="text-lg lg:text-xl font-normal text-[#1d1d1f] dark:text-[#f5f5f7] leading-relaxed"
+          >
+            {paragraph}
+          </p>
+        ))}
+      </motion.div>
     </section>
   );
 };

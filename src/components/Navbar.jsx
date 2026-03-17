@@ -40,7 +40,7 @@ const Navbar = () => {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[#f5f5f7]/85 dark:bg-black/80 backdrop-blur-xl border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
+          ? "bg-[#f5f5f7]/70 dark:bg-black/70 backdrop-blur border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
           : "bg-transparent"
       }`}
     >

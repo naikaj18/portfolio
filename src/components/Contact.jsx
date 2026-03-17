@@ -10,7 +10,7 @@ const Contact = () => {
       {/* Large faint background text — purely decorative */}
       <span
         aria-hidden="true"
-        className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] lg:text-[12rem] font-bold tracking-tighter text-[#1d1d1f] dark:text-[#f5f5f7] leading-none opacity-[0.04] whitespace-nowrap"
+        className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] lg:text-[12rem] font-bold tracking-tighter text-[#1d1d1f] dark:text-[#f5f5f7] leading-none opacity-[0.06] whitespace-nowrap"
       >
         Say Hello
       </span>

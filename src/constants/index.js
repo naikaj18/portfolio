@@ -1,6 +1,9 @@
 export const HERO_CONTENT = `I build production AI systems and full-stack applications — RAG pipelines, agentic frameworks, and cloud infrastructure — hardened for security, wired for observability, and built to scale.`;
 
-export const ABOUT_TEXT = `I'm an AI, Cloud & Full Stack Engineer with end-to-end ownership across the stack — from React frontends and FastAPI backends to AWS CDK infrastructure. At AAA, I build agentic insurance chatbots on AWS Bedrock with RAG pipelines serving multiple states, and I treat security and observability as first-class concerns: IAM hardening, guardrail enforcement, CloudWatch dashboards, and real-time alerting are part of every system I ship. Before that, I delivered a full-stack RAG platform at Dreamline AI on SageMaker and FAISS, and optimized enterprise database systems at Capgemini — earning recognition awards for architecture improvements that cut query times by 25%. I hold an MS in Computer Science (3.74 GPA) from Cal State Fullerton and an AWS Certified Developer – Associate credential.`;
+export const ABOUT_TEXT = [
+  `I'm an AI, Cloud & Full Stack Engineer with end-to-end ownership across the stack — from React frontends and FastAPI backends to AWS CDK infrastructure. At AAA, I build agentic insurance chatbots on AWS Bedrock with RAG pipelines serving multiple states, and I treat security and observability as first-class concerns: IAM hardening, guardrail enforcement, CloudWatch dashboards, and real-time alerting are part of every system I ship.`,
+  `Before that, I delivered a full-stack RAG platform at Dreamline AI on SageMaker and FAISS, and optimized enterprise database systems at Capgemini — earning recognition awards for architecture improvements that cut query times by 25%. I hold an MS in Computer Science (3.74 GPA) from Cal State Fullerton and an AWS Certified Developer – Associate credential.`,
+];
 
 export const EXPERIENCES = [
   {
@@ -52,12 +55,14 @@ export const PROJECTS = [
   {
     title: "HealthForge",
     subtitle: "Serverless Health Analytics Pipeline",
+    link: "https://github.com/naikaj18/HealthForge",
     description: "Serverless pipeline on AWS that ingests Apple Health data via REST API, computes weighted health scores across sleep, fitness, recovery, consistency, and cardio with 30-day rolling baselines and anomaly detection, generates AI insights via Google Gemini Flash, and delivers a rich HTML dashboard email every Sunday morning. Built entirely on AWS free tier.",
     technologies: ["AWS CDK", "Lambda", "Step Functions", "DynamoDB", "SES", "API Gateway", "SQS", "Python", "Gemini"],
   },
   {
     title: "Mailliam",
     subtitle: "AI-Powered Email Summarization Assistant",
+    link: "https://github.com/naikaj18/mailliam",
     description: "Personal AI assistant that connects to Gmail via OAuth, fetches and classifies emails, and generates retrieval-augmented summaries using context-aware LLM prompting. Built with FastAPI and Supabase — designed to cut time-to-inbox-zero and surface what actually matters.",
     technologies: ["Python", "FastAPI", "React", "LLMs", "Gmail API", "Supabase", "RAG"],
   },

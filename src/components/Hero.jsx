@@ -103,7 +103,7 @@ const Hero = () => {
           {/* Typewriter tagline */}
           <TypewriterText
             text={HERO_CONTENT}
-            className="text-lg lg:text-xl text-[#6e6e73] dark:text-[#98989d] max-w-md leading-relaxed mb-10"
+            className="text-lg lg:text-xl text-[#424245] dark:text-[#b0b0b5] max-w-md leading-relaxed mb-10"
           />
 
           <motion.div

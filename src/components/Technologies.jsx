@@ -70,7 +70,7 @@ const Technologies = () => {
                   {skills.map((skill, i) => (
                     <span
                       key={i}
-                      className={`text-xs px-2.5 py-1 rounded-full border ${meta.pill}`}
+                      className={`skill-pill text-xs px-2.5 py-1 rounded-full border cursor-default ${meta.pill}`}
                     >
                       {skill}
                     </span>
