@@ -14,7 +14,7 @@ export const EXPERIENCES = [
       "Built end-to-end observability infrastructure using AWS CDK, CloudWatch, CloudTrail, and SNS — enabling real-time monitoring of Bedrock API usage and guardrail violations across multi-region deployments.",
       "Provisioned and maintained cloud infrastructure via AWS CDK and YAML-based CI/CD pipelines, delivering Lambda functions, Step Functions, S3 buckets, and DynamoDB tables as production-grade IaC.",
     ],
-    technologies: ["AWS Bedrock", "Python", "Lambda", "DynamoDB", "AWS CDK", "RAG", "Strands Agents"],
+    technologies: ["AWS Cloud", "Python", "AWS Bedrock", "RAG", "Strands Agents", "AWS CDK", "DynamoDB"],
   },
   {
     year: "Jun 2024 – Jun 2025",
