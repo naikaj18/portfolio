@@ -52,7 +52,7 @@ export const PROJECTS = [
   {
     title: "HealthForge",
     subtitle: "Serverless Health Analytics Pipeline",
-    description: "Serverless pipeline on AWS that ingests Apple Health data via REST API, computes weighted health scores across sleep, fitness, recovery, consistency, and cardio with 30-day rolling baselines and anomaly detection, generates AI insights via Google Gemini Flash, and delivers a rich HTML dashboard email every Sunday morning. Built entirely on AWS free tier — costs $0/month.",
+    description: "Serverless pipeline on AWS that ingests Apple Health data via REST API, computes weighted health scores across sleep, fitness, recovery, consistency, and cardio with 30-day rolling baselines and anomaly detection, generates AI insights via Google Gemini Flash, and delivers a rich HTML dashboard email every Sunday morning. Built entirely on AWS free tier.",
     technologies: ["AWS CDK", "Lambda", "Step Functions", "DynamoDB", "SES", "API Gateway", "SQS", "Python", "Gemini"],
   },
   {
