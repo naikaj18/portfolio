@@ -26,7 +26,7 @@ export const EXPERIENCES = [
       "Owned the full stack: React frontend, FastAPI backend, and AWS-deployed infrastructure with YAML-based CI/CD pipelines — from local development to production release.",
       "Designed a SQL Server schema unifying geographic, demographic, property, and energy datasets, enabling structured cross-domain queries that powered the platform's core analytics.",
     ],
-    technologies: ["Python", "FastAPI", "React", "AWS SageMaker", "FAISS", "OpenAI", "SQL Server"],
+    technologies: ["Python", "FastAPI", "React", "AWS SageMaker", "FAISS", "OpenAI"],
   },
   {
     year: "Jan 2020 – Jul 2022",
