@@ -6,10 +6,12 @@ const Education = () => {
   const { isDark } = useTheme();
   const cardStyle = {
     background: isDark
-      ? "linear-gradient(160deg, #1c1c1e 0%, #161618 100%)"
+      ? "rgba(255,255,255,0.05)"
       : "linear-gradient(160deg, #ffffff 0%, #fafafa 100%)",
+    backdropFilter: isDark ? "blur(16px) saturate(180%)" : undefined,
+    WebkitBackdropFilter: isDark ? "blur(16px) saturate(180%)" : undefined,
     boxShadow: isDark
-      ? "0 1px 4px rgba(0,0,0,0.3), 0 0 0 0.5px rgba(255,255,255,0.04)"
+      ? "0 4px 30px rgba(0,0,0,0.3), inset 0 0.5px 0 rgba(255,255,255,0.08)"
       : "0 1px 4px rgba(0,0,0,0.05), 0 0 0 0.5px rgba(0,0,0,0.03)",
   };
   return (
@@ -44,7 +46,7 @@ const Education = () => {
             className="h-full"
           >
             <div
-              className="project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-[#3a3a3c] h-full"
+              className="project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-white/10 h-full"
               style={cardStyle}
             >
               <p className="section-label mb-3 uppercase">Master of Computer Science</p>
@@ -73,7 +75,7 @@ const Education = () => {
             className="h-full"
           >
             <div
-              className="project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-[#3a3a3c] h-full"
+              className="project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-white/10 h-full"
               style={cardStyle}
             >
               <p className="section-label mb-3 uppercase">Certification</p>

@@ -40,7 +40,7 @@ const Navbar = () => {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[#f5f5f7]/70 dark:bg-black/70 backdrop-blur border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
+          ? "bg-[#f5f5f7]/70 dark:bg-white/[0.04] backdrop-blur-xl dark:backdrop-blur-xl border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
           : "bg-transparent"
       }`}
     >
@@ -122,7 +122,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download resume PDF"
-              className="inline-flex items-center gap-1.5 text-xs px-3.5 py-1.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white/60 dark:bg-transparent text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-[#f5f5f7] hover:bg-white dark:hover:bg-white/5 transition-all duration-200"
+              className="inline-flex items-center gap-1.5 text-xs px-3.5 py-1.5 rounded-full border border-[#d2d2d7] dark:border-white/10 bg-white/60 dark:bg-white/10 dark:backdrop-blur-md text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-white/30 hover:bg-white dark:hover:bg-white/15 transition-all duration-200"
             >
               <Download size={11} aria-hidden="true" />
               Resume

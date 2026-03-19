@@ -41,13 +41,15 @@ const Projects = () => {
             >
               {/* project-card-inner carries the accent left-border on hover */}
               <div
-                className="project-card-inner project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-[#3a3a3c] cursor-default overflow-hidden"
+                className="project-card-inner project-card rounded-2xl p-7 border border-[#d2d2d7] dark:border-white/10 cursor-default overflow-hidden"
                 style={{
                   background: isDark
-                    ? "linear-gradient(160deg, #1c1c1e 0%, #161618 100%)"
+                    ? "rgba(255,255,255,0.05)"
                     : "linear-gradient(160deg, #ffffff 0%, #fafafa 100%)",
+                  backdropFilter: isDark ? "blur(16px) saturate(180%)" : undefined,
+                  WebkitBackdropFilter: isDark ? "blur(16px) saturate(180%)" : undefined,
                   boxShadow: isDark
-                    ? "0 1px 4px rgba(0,0,0,0.3), 0 0 0 0.5px rgba(255,255,255,0.04)"
+                    ? "0 4px 30px rgba(0,0,0,0.3), inset 0 0.5px 0 rgba(255,255,255,0.08)"
                     : "0 1px 4px rgba(0,0,0,0.05), 0 0 0 0.5px rgba(0,0,0,0.03)",
                 }}
               >
@@ -94,7 +96,7 @@ const Projects = () => {
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs px-2.5 py-1 rounded-full bg-[#f5f5f7] dark:bg-[#2c2c2e] border border-[#e5e5ea] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]"
+                      className="text-xs px-2.5 py-1 rounded-full bg-[#f5f5f7] dark:bg-white/10 dark:backdrop-blur-sm border border-[#e5e5ea] dark:border-white/10 text-[#1d1d1f] dark:text-[#f5f5f7]"
                     >
                       {tech}
                     </span>

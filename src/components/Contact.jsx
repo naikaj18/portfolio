@@ -70,7 +70,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit LinkedIn profile"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white dark:bg-[#1c1c1e] text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-[#f5f5f7] transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-white/10 bg-white dark:bg-white/10 dark:backdrop-blur-md text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-white/30 dark:hover:bg-white/15 transition-colors duration-200"
             >
               <Linkedin size={15} aria-hidden="true" />
               LinkedIn
@@ -82,7 +82,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit GitHub profile"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white dark:bg-[#1c1c1e] text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-[#f5f5f7] transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#d2d2d7] dark:border-white/10 bg-white dark:bg-white/10 dark:backdrop-blur-md text-sm text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-white/30 dark:hover:bg-white/15 transition-colors duration-200"
             >
               <Github size={15} aria-hidden="true" />
               GitHub

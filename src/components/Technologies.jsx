@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 const CATEGORY_META = {
   "Languages & Frameworks": {
     index: "01",
-    pill: "bg-white dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
-    container: "bg-white/50 dark:bg-[#1c1c1e]/60 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+    pill: "bg-white dark:bg-white/10 dark:backdrop-blur-sm border-[#d2d2d7] dark:border-white/10 text-[#1d1d1f] dark:text-[#f5f5f7]",
+    container: "bg-white/50 dark:bg-white/[0.04] dark:backdrop-blur-xl border border-[#e8e8ed] dark:border-white/10 rounded-2xl p-4",
   },
   "AI / ML": {
     index: "02",
-    pill: "bg-[#f0f0f5] dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
-    container: "bg-[#f7f7fa]/60 dark:bg-[#1c1c1e]/40 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+    pill: "bg-[#f0f0f5] dark:bg-white/10 dark:backdrop-blur-sm border-[#d2d2d7] dark:border-white/10 text-[#1d1d1f] dark:text-[#f5f5f7]",
+    container: "bg-[#f7f7fa]/60 dark:bg-white/[0.04] dark:backdrop-blur-xl border border-[#e8e8ed] dark:border-white/10 rounded-2xl p-4",
   },
   "Cloud & DevOps": {
     index: "03",
-    pill: "bg-white dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
-    container: "bg-white/30 dark:bg-[#1c1c1e]/30 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+    pill: "bg-white dark:bg-white/10 dark:backdrop-blur-sm border-[#d2d2d7] dark:border-white/10 text-[#1d1d1f] dark:text-[#f5f5f7]",
+    container: "bg-white/30 dark:bg-white/[0.04] dark:backdrop-blur-xl border border-[#e8e8ed] dark:border-white/10 rounded-2xl p-4",
   },
 };
 
 const fallbackMeta = (i) => ({
   index: String(i + 1).padStart(2, "0"),
-  pill: "bg-white dark:bg-[#2c2c2e] border-[#d2d2d7] dark:border-[#3a3a3c] text-[#1d1d1f] dark:text-[#f5f5f7]",
-  container: "bg-white/40 dark:bg-[#1c1c1e]/40 border border-[#e8e8ed] dark:border-[#3a3a3c] rounded-2xl p-4",
+  pill: "bg-white dark:bg-white/10 dark:backdrop-blur-sm border-[#d2d2d7] dark:border-white/10 text-[#1d1d1f] dark:text-[#f5f5f7]",
+  container: "bg-white/40 dark:bg-white/[0.04] dark:backdrop-blur-xl border border-[#e8e8ed] dark:border-white/10 rounded-2xl p-4",
 });
 
 const Technologies = () => {
