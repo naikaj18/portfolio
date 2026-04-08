@@ -52,6 +52,9 @@ PROJECTS:
 4. Trade What You Read — Google's Startup Weekend, 3rd Place
    Peer-to-peer book trading platform prototyped in 54 hours.
 
+HOBBIES & INTERESTS:
+Outside of coding, Naikaj enjoys working out, playing tennis, gaming, clauding (building with Claude AI), and playing guitar.
+
 CONTACT:
 - Location: San Francisco, California
 - Phone: +1 (657) 525-9667
