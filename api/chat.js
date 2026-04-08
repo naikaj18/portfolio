@@ -93,14 +93,15 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "GEMINI_API_KEY is not configured" });
   }
 
-  const models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite"];
   const genAI = new GoogleGenerativeAI(apiKey);
   const chatHistory = [...SEED_HISTORY, ...(Array.isArray(history) ? history : [])];
+  const delay = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  for (const modelName of models) {
+  // Retry up to 3 times with backoff for 503 (overloaded)
+  for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const model = genAI.getGenerativeModel({
-        model: modelName,
+        model: "gemini-2.5-flash",
         systemInstruction: PORTFOLIO_CONTEXT,
       });
 
@@ -110,10 +111,13 @@ export default async function handler(req, res) {
 
       return res.status(200).json({ reply });
     } catch (error) {
-      console.error(`${modelName} failed:`, error.message);
-      if (modelName === models[models.length - 1]) {
-        return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
+      console.error(`Attempt ${attempt + 1} failed:`, error.message);
+      const is503 = error.status === 503 || error.message?.includes("503");
+      if (is503 && attempt < 2) {
+        await delay((attempt + 1) * 2000);
+        continue;
       }
+      return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
     }
   }
 }
