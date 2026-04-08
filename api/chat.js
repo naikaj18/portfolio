@@ -106,6 +106,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply });
   } catch (error) {
     console.error("Gemini API error:", error);
-    return res.status(500).json({ error: "Failed to get response from AI" });
+    return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
   }
 }
