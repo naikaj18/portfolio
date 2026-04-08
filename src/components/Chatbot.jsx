@@ -103,7 +103,7 @@ export default function Chatbot() {
               <p className="font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] text-sm">
                 Ask about Naikaj
               </p>
-              <p className="text-xs text-[#6e6e73] dark:text-[#98989d] mt-0.5">
+              <p className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] mt-0.5">
                 Powered by AI — knows everything on this site
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function Chatbot() {
               {loading && (
                 <div className="flex justify-start">
                   <div className="bg-white dark:bg-white/10 border border-[#d2d2d7] dark:border-[#3a3a3c] rounded-2xl rounded-bl-md px-4 py-2.5">
-                    <Loader2 className="w-4 h-4 animate-spin text-[#6e6e73] dark:text-[#98989d]" />
+                    <Loader2 className="w-4 h-4 animate-spin text-[#6e6e73] dark:text-[#a1a1a6]" />
                   </div>
                 </div>
               )}
@@ -143,7 +143,7 @@ export default function Chatbot() {
                     <button
                       key={s}
                       onClick={() => sendMessage(s)}
-                      className="text-xs px-3 py-1.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] text-[#6e6e73] dark:text-[#98989d] hover:bg-[#1d1d1f] hover:text-[#f5f5f7] dark:hover:bg-[#f5f5f7] dark:hover:text-[#1d1d1f] hover:border-transparent transition-colors"
+                      className="text-xs px-3 py-1.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] text-[#6e6e73] dark:text-[#a1a1a6] hover:bg-[#1d1d1f] hover:text-[#f5f5f7] dark:hover:bg-[#f5f5f7] dark:hover:text-[#1d1d1f] hover:border-transparent transition-colors"
                     >
                       {s}
                     </button>
@@ -164,7 +164,7 @@ export default function Chatbot() {
                 onKeyDown={handleKeyDown}
                 disabled={loading}
                 placeholder="Ask something..."
-                className="flex-1 text-sm bg-transparent text-[#1d1d1f] dark:text-[#f5f5f7] placeholder-[#6e6e73] dark:placeholder-[#98989d] outline-none disabled:opacity-50"
+                className="flex-1 text-sm bg-transparent text-[#1d1d1f] dark:text-[#f5f5f7] placeholder-[#6e6e73] dark:placeholder-[#a1a1a6] outline-none disabled:opacity-50"
               />
               <motion.button
                 whileTap={{ scale: 0.9 }}

@@ -89,7 +89,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="text-6xl lg:text-8xl font-semibold tracking-tight leading-tight mb-6"
+            className="text-4xl sm:text-5xl lg:text-8xl font-semibold tracking-tight leading-tight mb-6"
             style={{
               backgroundImage: nameGradient,
               WebkitBackgroundClip: "text",
@@ -120,7 +120,7 @@ const Hero = () => {
                 Get in touch
               </a>
             </MagneticWrapper>
-            <span className="text-xs text-[#6e6e73] dark:text-[#98989d] border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white/60 dark:bg-transparent rounded-full px-3.5 py-1.5 backdrop-blur-sm">
+            <span className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] border border-[#d2d2d7] dark:border-[#3a3a3c] bg-white/60 dark:bg-transparent rounded-full px-3.5 py-1.5 backdrop-blur-sm">
               AWS Certified Developer – Associate
             </span>
           </motion.div>

@@ -28,16 +28,16 @@ const Experience = () => {
             className="experience-block grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-8"
           >
             <div className="lg:col-span-1 pt-1">
-              <p className="text-xs text-[#6e6e73] dark:text-[#98989d] leading-relaxed tabular-nums">{experience.year}</p>
+              <p className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] leading-relaxed tabular-nums">{experience.year}</p>
             </div>
             <div className="lg:col-span-3">
               <h3 className="text-base font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-0.5">
                 {experience.role}
                 {experience.type && (
-                  <span className="ml-2 text-xs font-normal text-[#6e6e73] dark:text-[#98989d]">({experience.type})</span>
+                  <span className="ml-2 text-xs font-normal text-[#6e6e73] dark:text-[#a1a1a6]">({experience.type})</span>
                 )}
               </h3>
-              <p className="text-sm text-[#6e6e73] dark:text-[#98989d] mb-4 font-medium">{experience.company}</p>
+              <p className="text-sm text-[#6e6e73] dark:text-[#a1a1a6] mb-4 font-medium">{experience.company}</p>
               <ul className="space-y-3 mb-5">
                 {experience.description.map((point, i) => (
                   <li

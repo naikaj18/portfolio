@@ -13,7 +13,7 @@ html {
 
 /* ─── Accent color tokens ─────────────────────────────────────────── */
 :root {
-  --accent: #6366f1;        /* indigo-500 — light mode */
+  --accent: #4f46e5;        /* indigo-600 — light mode */
 }
 .dark {
   --accent: #818cf8;        /* indigo-400 — dark mode, slightly brighter */

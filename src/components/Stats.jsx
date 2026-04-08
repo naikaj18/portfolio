@@ -10,7 +10,7 @@ const STATS = [
 
 const Stats = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true, amount: 0 });
 
   return (
     <section ref={ref} className="border-t border-b border-[#d2d2d7] dark:border-[#3a3a3c] py-10">
@@ -49,7 +49,7 @@ const Stats = () => {
                 </>
               )}
             </span>
-            <span className="text-[10px] tracking-widest uppercase text-[#6e6e73] dark:text-[#98989d] font-medium mt-1">
+            <span className="text-[10px] tracking-widest uppercase text-[#6e6e73] dark:text-[#a1a1a6] font-medium mt-1">
               {stat.label}
             </span>
           </div>

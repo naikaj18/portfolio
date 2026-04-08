@@ -67,18 +67,11 @@ const Projects = () => {
                         <ArrowUpRight
                           aria-hidden="true"
                           size={15}
-                          className="text-[#6e6e73] dark:text-[#98989d] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                          className="text-[#6e6e73] dark:text-[#a1a1a6] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                         />
                       </a>
                     ) : (
-                      <>
-                        {project.title}
-                        <ArrowUpRight
-                          aria-hidden="true"
-                          size={15}
-                          className="text-[#6e6e73] dark:text-[#98989d] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                        />
-                      </>
+                      project.title
                     )}
                   </h3>
                   <span
@@ -89,7 +82,7 @@ const Projects = () => {
                   </span>
                 </div>
 
-                <p className="text-xs text-[#6e6e73] dark:text-[#98989d] mb-4 font-medium">{project.subtitle}</p>
+                <p className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] mb-4 font-medium">{project.subtitle}</p>
                 <p className="text-sm text-[#1d1d1f] dark:text-[#f5f5f7] leading-relaxed mb-5">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">

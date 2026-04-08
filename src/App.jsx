@@ -15,7 +15,7 @@ export default function App() {
     <div className="bg-[#f5f5f7] dark:bg-[#1c1c1e] text-[#1d1d1f] dark:text-[#f5f5f7] antialiased selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-900 dark:selection:text-blue-100">
 <ProgressBar />
       <Navbar />
-      <main className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 overflow-x-hidden">
+      <main className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 overflow-x-hidden pb-20 sm:pb-0">
         <Hero />
         <Stats />
         <About />

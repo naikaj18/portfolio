@@ -23,7 +23,7 @@ const About = () => {
         {ABOUT_TEXT.map((paragraph, i) => (
           <p
             key={i}
-            className="text-lg lg:text-xl font-normal text-[#1d1d1f] dark:text-[#f5f5f7] leading-relaxed"
+            className="text-base lg:text-lg font-normal text-[#1d1d1f] dark:text-[#f5f5f7] leading-relaxed"
           >
             {paragraph}
           </p>

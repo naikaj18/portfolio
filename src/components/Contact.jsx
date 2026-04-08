@@ -42,7 +42,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.5, delay: 0.15 }}
           viewport={{ once: true }}
-          className="text-[#6e6e73] dark:text-[#98989d] text-sm leading-relaxed max-w-sm mb-10"
+          className="text-[#6e6e73] dark:text-[#a1a1a6] text-sm leading-relaxed max-w-sm mb-10"
         >
           {CONTACT.location} — Available for full-time roles in AI engineering, cloud, or full-stack development.
         </motion.p>
@@ -98,10 +98,10 @@ const Contact = () => {
           viewport={{ once: true }}
           className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-6 border-t border-[#e8e8ed] dark:border-[#3a3a3c]"
         >
-          <p className="text-xs text-[#6e6e73] dark:text-[#98989d]">
+          <p className="text-xs text-[#6e6e73] dark:text-[#a1a1a6]">
             © {new Date().getFullYear()} Naikaj Shiradkar
           </p>
-          <p className="text-xs text-[#6e6e73] dark:text-[#98989d]">
+          <p className="text-xs text-[#6e6e73] dark:text-[#a1a1a6]">
             AI, Cloud &amp; Full Stack Engineer · San Francisco
           </p>
         </motion.div>

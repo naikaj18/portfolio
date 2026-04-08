@@ -59,7 +59,7 @@ const Technologies = () => {
                   >
                     {meta.index}
                   </span>
-                  <span className="text-xs font-medium text-[#6e6e73] dark:text-[#98989d]">
+                  <span className="text-xs font-medium text-[#6e6e73] dark:text-[#a1a1a6]">
                     {category}
                   </span>
                 </p>
