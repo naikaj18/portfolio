@@ -93,22 +93,27 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "GEMINI_API_KEY is not configured" });
   }
 
-  try {
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
-      systemInstruction: PORTFOLIO_CONTEXT,
-    });
+  const models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite"];
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const chatHistory = [...SEED_HISTORY, ...(Array.isArray(history) ? history : [])];
 
-    const chatHistory = [...SEED_HISTORY, ...(Array.isArray(history) ? history : [])];
+  for (const modelName of models) {
+    try {
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+        systemInstruction: PORTFOLIO_CONTEXT,
+      });
 
-    const chat = model.startChat({ history: chatHistory });
-    const result = await chat.sendMessage(message.trim());
-    const reply = result.response.text();
+      const chat = model.startChat({ history: chatHistory });
+      const result = await chat.sendMessage(message.trim());
+      const reply = result.response.text();
 
-    return res.status(200).json({ reply });
-  } catch (error) {
-    console.error("Gemini API error:", error);
-    return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
+      return res.status(200).json({ reply });
+    } catch (error) {
+      console.error(`${modelName} failed:`, error.message);
+      if (modelName === models[models.length - 1]) {
+        return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
+      }
+    }
   }
 }
