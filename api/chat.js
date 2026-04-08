@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import Groq from "groq-sdk";
 
 const PORTFOLIO_CONTEXT = `You are a witty AI assistant on Naikaj's portfolio website. Answer questions about Naikaj based ONLY on the following information. Be concise, clever, and a little playful — sprinkle in humor where it fits, but keep it natural and never forced. Always refer to him as "Naikaj" (never "Naikaj Shiradkar" — first name only, we're casual here). If asked something not covered below, say you don't have that info and suggest reaching out to Naikaj directly at naikaj18@gmail.com.
 
@@ -62,21 +62,6 @@ CONTACT:
 - LinkedIn: linkedin.com/in/naikaj
 - GitHub: github.com/naikaj18`;
 
-const SEED_HISTORY = [
-  {
-    role: "user",
-    parts: [{ text: "What can you tell me about Naikaj?" }],
-  },
-  {
-    role: "model",
-    parts: [
-      {
-        text: "Hi! I'm here to tell you all about Naikaj Shiradkar. He's an AI, Cloud & Full Stack Engineer based in San Francisco, CA, with a strong background in building production AI systems, RAG pipelines, agentic frameworks, and cloud infrastructure. He holds an MS in Computer Science from Cal State Fullerton and is an AWS Certified Developer. Feel free to ask me anything about his experience, skills, or projects!",
-      },
-    ],
-  },
-];
-
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -88,36 +73,37 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "message must be a non-empty string" });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: "GEMINI_API_KEY is not configured" });
+    return res.status(500).json({ error: "GROQ_API_KEY is not configured" });
   }
 
-  const genAI = new GoogleGenerativeAI(apiKey);
-  const chatHistory = [...SEED_HISTORY, ...(Array.isArray(history) ? history : [])];
-  const delay = (ms) => new Promise((r) => setTimeout(r, ms));
+  try {
+    const groq = new Groq({ apiKey });
 
-  // Retry up to 3 times with backoff for 503 (overloaded)
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try {
-      const model = genAI.getGenerativeModel({
-        model: "gemini-2.5-flash",
-        systemInstruction: PORTFOLIO_CONTEXT,
-      });
+    // Build messages array: system + history + user message
+    const messages = [
+      { role: "system", content: PORTFOLIO_CONTEXT },
+      ...(Array.isArray(history)
+        ? history.map((m) => ({
+            role: m.role === "model" ? "assistant" : m.role,
+            content: m.parts?.[0]?.text || m.content || "",
+          }))
+        : []),
+      { role: "user", content: message.trim() },
+    ];
 
-      const chat = model.startChat({ history: chatHistory });
-      const result = await chat.sendMessage(message.trim());
-      const reply = result.response.text();
+    const completion = await groq.chat.completions.create({
+      model: "llama-3.3-70b-versatile",
+      messages,
+      temperature: 0.7,
+      max_tokens: 512,
+    });
 
-      return res.status(200).json({ reply });
-    } catch (error) {
-      console.error(`Attempt ${attempt + 1} failed:`, error.message);
-      const is503 = error.status === 503 || error.message?.includes("503");
-      if (is503 && attempt < 2) {
-        await delay((attempt + 1) * 2000);
-        continue;
-      }
-      return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
-    }
+    const reply = completion.choices[0]?.message?.content || "Sorry, I couldn't generate a response.";
+    return res.status(200).json({ reply });
+  } catch (error) {
+    console.error("Groq API error:", error);
+    return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
   }
 }
