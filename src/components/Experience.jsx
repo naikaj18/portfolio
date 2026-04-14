@@ -5,7 +5,7 @@ import { useTheme } from "../context/ThemeContext";
 const Experience = () => {
   const { isDark } = useTheme();
   return (
-    <section id="experience" className="py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
+    <section id="experience" className="py-12 sm:py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
       <motion.p
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 10 }}
