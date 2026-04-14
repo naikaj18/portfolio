@@ -15,7 +15,7 @@ const Projects = () => {
         viewport={{ once: true }}
         className="section-label uppercase mb-12"
       >
-        04 — Projects
+        04 - Projects
       </motion.p>
 
       <div className="space-y-4">

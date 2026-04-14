@@ -52,7 +52,7 @@ const Navbar = () => {
           Naikaj Shiradkar
         </a>
 
-        {/* Nav links — desktop only */}
+        {/* Nav links - desktop only */}
         <div className="hidden md:flex items-center gap-7">
           {NAV_LINKS.map(({ label, href }) => {
             const id = href.replace("#", "");
@@ -118,7 +118,7 @@ const Navbar = () => {
             </MagneticWrapper>
           </div>
           <ThemeToggle />
-          {/* Hamburger — mobile only */}
+          {/* Hamburger - mobile only */}
           <button
             className="md:hidden flex items-center justify-center w-8 h-8 rounded-md text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors duration-200"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}

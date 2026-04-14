@@ -13,10 +13,10 @@ const Experience = () => {
         viewport={{ once: true }}
         className="section-label uppercase mb-12"
       >
-        02 — Experience
+        02 - Experience
       </motion.p>
 
-      {/* Timeline wrapper — thin vertical line on desktop */}
+      {/* Timeline wrapper - thin vertical line on desktop */}
       <div className="experience-timeline space-y-10 lg:pl-6">
         {EXPERIENCES.map((experience, index) => (
           <motion.div

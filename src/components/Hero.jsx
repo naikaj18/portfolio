@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 import { useTheme } from "../context/ThemeContext";
 import MagneticWrapper from "./MagneticWrapper";
 
-// Word-by-word reveal — avoids mid-word line breaks
+// Word-by-word reveal - avoids mid-word line breaks
 const TypewriterText = ({ text, className }) => {
   const words = text.split(" ");
 

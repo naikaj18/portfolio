@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-10 sm:py-28 border-t border-[#d2d2d7] dark:border-[#3a3a3c] relative overflow-hidden">
 
-      {/* Large faint background text — purely decorative */}
+      {/* Large faint background text - purely decorative */}
       <span
         aria-hidden="true"
         className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold tracking-tighter text-[#1d1d1f] dark:text-[#f5f5f7] leading-none opacity-[0.12] sm:opacity-[0.08] lg:opacity-[0.06] whitespace-nowrap"
@@ -25,7 +25,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="section-label uppercase mb-6"
         >
-          06 — Contact
+          06 - Contact
         </motion.p>
 
         <motion.h2
@@ -45,7 +45,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-[#6e6e73] dark:text-[#a1a1a6] text-sm leading-relaxed max-w-sm mb-10"
         >
-          {CONTACT.location} — Available for full-time roles in AI engineering, cloud, or full-stack development.
+          {CONTACT.location} - Available for full-time roles in AI engineering, cloud, or full-stack development.
         </motion.p>
 
         <motion.div

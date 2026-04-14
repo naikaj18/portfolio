@@ -11,7 +11,7 @@ const About = () => {
         viewport={{ once: true }}
         className="section-label uppercase mb-6"
       >
-        01 — About
+        01 - About
       </motion.p>
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}

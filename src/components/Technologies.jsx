@@ -35,7 +35,7 @@ const Technologies = () => {
         viewport={{ once: true }}
         className="section-label uppercase mb-12"
       >
-        03 — Skills
+        03 - Skills
       </motion.p>
 
       <div className="space-y-4">

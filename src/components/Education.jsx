@@ -23,7 +23,7 @@ const Education = () => {
         viewport={{ once: true }}
         className="section-label uppercase mb-12"
       >
-        05 — Education &amp; Certification
+        05 - Education &amp; Certification
       </motion.p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -80,7 +80,7 @@ const Education = () => {
             >
               <p className="section-label mb-3 uppercase">Certification</p>
               <h3 className="text-base font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-1.5">AWS Certified Developer</h3>
-              <p className="text-sm text-[#6e6e73] dark:text-[#a1a1a6]">Associate — Amazon Web Services</p>
+              <p className="text-sm text-[#6e6e73] dark:text-[#a1a1a6]">Associate - Amazon Web Services</p>
             </div>
           </Tilt>
         </motion.div>
