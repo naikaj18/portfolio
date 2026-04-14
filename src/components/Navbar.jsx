@@ -46,9 +46,9 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 flex items-center justify-between py-4">
+      <nav className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 flex items-center justify-between py-5">
         {/* Name */}
-        <a href="#" className="text-sm font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight" aria-label="Go to top">
+        <a href="#" className="text-base sm:text-lg font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight" aria-label="Go to top">
           Naikaj Shiradkar
         </a>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
               <a
                 key={label}
                 href={href}
-                className={`relative text-sm transition-colors duration-200 ${
+                className={`relative text-[15px] transition-colors duration-200 ${
                   isActive
                     ? "text-[#1d1d1f] dark:text-[#f5f5f7] font-medium"
                     : "text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]"
@@ -91,7 +91,7 @@ const Navbar = () => {
                 aria-label="LinkedIn profile"
                 className="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors duration-200"
               >
-                <Linkedin size={16} aria-hidden="true" />
+                <Linkedin size={18} aria-hidden="true" />
               </a>
             </MagneticWrapper>
             <MagneticWrapper strength={0.4}>
@@ -102,7 +102,7 @@ const Navbar = () => {
                 aria-label="GitHub profile"
                 className="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] transition-colors duration-200"
               >
-                <Github size={16} aria-hidden="true" />
+                <Github size={18} aria-hidden="true" />
               </a>
             </MagneticWrapper>
             <MagneticWrapper strength={0.4}>
@@ -133,9 +133,9 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download resume PDF"
-              className="inline-flex items-center gap-1.5 text-xs px-3.5 py-1.5 rounded-full border border-[#d2d2d7] dark:border-white/10 bg-white/60 dark:bg-white/10 dark:backdrop-blur-md text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-white/30 hover:bg-white dark:hover:bg-white/15 transition-all duration-200"
+              className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-full border border-[#d2d2d7] dark:border-white/10 bg-white/60 dark:bg-white/10 dark:backdrop-blur-md text-[#1d1d1f] dark:text-[#f5f5f7] hover:border-[#1d1d1f] dark:hover:border-white/30 hover:bg-white dark:hover:bg-white/15 transition-all duration-200"
             >
-              <Download size={11} aria-hidden="true" />
+              <Download size={13} aria-hidden="true" />
               Resume
             </a>
           </MagneticWrapper>
