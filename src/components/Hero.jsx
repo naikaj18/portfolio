@@ -131,7 +131,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.65, delay: 0.18 }}
-          className="flex-shrink-0 lg:w-96"
+          className="flex-shrink-0 w-full lg:w-96 flex justify-center"
         >
           <Tilt
             tiltMaxAngleX={8}
@@ -143,7 +143,7 @@ const Hero = () => {
             glarePosition="all"
             scale={1.03}
             transitionSpeed={500}
-            className="w-56 lg:w-96 rounded-3xl"
+            className="w-full max-w-sm lg:w-96 lg:max-w-none rounded-3xl"
           >
             <div
               className="photo-ring rounded-3xl overflow-hidden"
