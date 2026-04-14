@@ -9,6 +9,8 @@ import Contact from "./components/Contact"
 import ProgressBar from "./components/ProgressBar"
 import Stats from "./components/Stats"
 import Chatbot from "./components/Chatbot"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
         <Contact />
       </main>
       <Chatbot />
+      <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
