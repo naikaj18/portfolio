@@ -10,7 +10,8 @@ const Contact = () => {
       {/* Large faint background text — purely decorative */}
       <span
         aria-hidden="true"
-        className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] lg:text-[12rem] font-bold tracking-tighter text-[#1d1d1f] dark:text-[#f5f5f7] leading-none opacity-[0.06] whitespace-nowrap"
+        className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold tracking-tighter text-[#1d1d1f] dark:text-[#f5f5f7] leading-none opacity-[0.06] whitespace-nowrap"
+        style={{ fontSize: "clamp(3.5rem, 18vw, 12rem)" }}
       >
         Say Hello
       </span>
@@ -32,7 +33,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-3xl lg:text-4xl font-bold tracking-tight text-[#1d1d1f] dark:text-[#f5f5f7] leading-tight mb-4"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1d1d1f] dark:text-[#f5f5f7] leading-tight mb-4"
         >
           Open to new opportunities.
         </motion.h2>

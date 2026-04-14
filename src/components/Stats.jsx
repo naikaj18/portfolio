@@ -23,7 +23,7 @@ const Stats = () => {
             } px-4`}
           >
             <span
-              className="text-4xl lg:text-5xl font-bold tracking-tight tabular-nums leading-none"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight tabular-nums leading-none"
               style={{ color: "var(--accent)" }}
             >
               {isInView ? (
@@ -37,14 +37,14 @@ const Stats = () => {
                     suffix={stat.suffix ?? ""}
                   />
                   {stat.superscript && (
-                    <sup className="text-2xl lg:text-3xl font-bold align-super">{stat.superscript}</sup>
+                    <sup className="text-xl sm:text-2xl lg:text-3xl font-bold align-super">{stat.superscript}</sup>
                   )}
                 </>
               ) : (
                 <>
                   0{stat.suffix ?? ""}
                   {stat.superscript && (
-                    <sup className="text-2xl lg:text-3xl font-bold align-super">{stat.superscript}</sup>
+                    <sup className="text-xl sm:text-2xl lg:text-3xl font-bold align-super">{stat.superscript}</sup>
                   )}
                 </>
               )}

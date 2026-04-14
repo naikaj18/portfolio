@@ -89,7 +89,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="text-4xl sm:text-5xl lg:text-8xl font-semibold tracking-tight leading-tight mb-6"
+            className="text-[clamp(2rem,9vw,3rem)] sm:text-5xl lg:text-8xl font-semibold tracking-tight leading-tight mb-6 break-words"
             style={{
               backgroundImage: nameGradient,
               WebkitBackgroundClip: "text",
