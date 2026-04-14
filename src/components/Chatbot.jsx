@@ -103,9 +103,6 @@ export default function Chatbot() {
               <p className="font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] text-sm">
                 Ask about Naikaj
               </p>
-              <p className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] mt-0.5">
-                Powered by AI — knows everything on this site
-              </p>
             </div>
 
             {/* Messages */}
