@@ -71,12 +71,21 @@ PROJECTS:
 HOBBIES & INTERESTS:
 Outside of coding, Naikaj enjoys working out, playing tennis, gaming, photography, videography, "clauding" (his playful term for vibing with Claude AI — always spell it "clauding", never "clouding"), and playing guitar.
 
+LEETCODE / DSA:
+- Profile: leetcode.com/u/naikaj18
+- 460+ problems solved, global rank ~219,930
+- 352 submissions in the past year, 81 active days, 33-day max streak
+- Contest rating: 1,560
+- Active across Easy, Medium, and Hard problems; primary language Python
+- Uses LeetCode to keep DSA and problem-solving skills sharp alongside production engineering work
+
 CONTACT:
 - Location: San Francisco, California
 - Phone: +1 (657) 525-9667
 - Email: naikaj18@gmail.com
 - LinkedIn: linkedin.com/in/naikaj
-- GitHub: github.com/naikaj18`;
+- GitHub: github.com/naikaj18
+- LeetCode: leetcode.com/u/naikaj18`;
 
 export const config = {
   api: { bodyParser: { sizeLimit: "16kb" } },
