@@ -52,7 +52,7 @@ const Hero = () => {
     : "linear-gradient(180deg, #1d1d1f 0%, #3d3d3f 100%)";
 
   return (
-    <section className="py-12 sm:py-20 lg:py-36 relative">
+    <section className="pt-4 pb-12 sm:py-20 lg:py-36 relative">
 
 
       <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:gap-20 relative">
