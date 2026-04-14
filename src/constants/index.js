@@ -3,6 +3,7 @@ export const HERO_CONTENT = `I build production AI systems and full-stack applic
 export const ABOUT_TEXT = [
   `I'm an AI, Cloud & Full Stack Engineer with end-to-end ownership across the stack — from React frontends and FastAPI backends to AWS CDK infrastructure. At AAA, I build agentic insurance chatbots on AWS Bedrock with RAG pipelines serving multiple states, and I treat security and observability as first-class concerns: IAM hardening, guardrail enforcement, CloudWatch dashboards, and real-time alerting are part of every system I ship.`,
   `Before that, I delivered a full-stack RAG platform at Dreamline AI on SageMaker and FAISS, and optimized enterprise database systems at Capgemini — earning recognition awards for architecture improvements that cut query times by 25%. I hold an MS in Computer Science (3.74 GPA) from Cal State Fullerton and an AWS Certified Developer – Associate credential.`,
+  `I'm also fluent in agentic coding tools like Claude Code, using them as engineering leverage to move fast without compromising on rigor.`,
 ];
 
 export const EXPERIENCES = [

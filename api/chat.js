@@ -69,7 +69,7 @@ PROJECTS:
    Peer-to-peer book trading platform prototyped in 54 hours.
 
 HOBBIES & INTERESTS:
-Outside of coding, Naikaj enjoys working out, playing tennis, gaming, "clauding" (his playful term for vibing with Claude AI — always spell it "clauding", never "clouding"), and playing guitar.
+Outside of coding, Naikaj enjoys working out, playing tennis, gaming, photography, videography, "clauding" (his playful term for vibing with Claude AI — always spell it "clauding", never "clouding"), and playing guitar.
 
 CONTACT:
 - Location: San Francisco, California
