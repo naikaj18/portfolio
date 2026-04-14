@@ -78,34 +78,78 @@ CONTACT:
 - LinkedIn: linkedin.com/in/naikaj
 - GitHub: github.com/naikaj18`;
 
+export const config = {
+  api: { bodyParser: { sizeLimit: "16kb" } },
+};
+
+const MAX_MESSAGE_LEN = 1000;
+const MAX_HISTORY_ENTRIES = 10;
+const MAX_HISTORY_CONTENT_LEN = 2000;
+
+// Simple in-memory rate limit per warm instance (best-effort; resets on cold start).
+const RATE_WINDOW_MS = 60_000;
+const RATE_MAX = 15;
+const rateMap = new Map();
+
+function getClientIp(req) {
+  const fwd = req.headers["x-forwarded-for"];
+  if (typeof fwd === "string" && fwd.length > 0) return fwd.split(",")[0].trim();
+  return req.socket?.remoteAddress || "unknown";
+}
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = rateMap.get(ip);
+  if (!entry || now - entry.start > RATE_WINDOW_MS) {
+    rateMap.set(ip, { start: now, count: 1 });
+    return false;
+  }
+  entry.count += 1;
+  return entry.count > RATE_MAX;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { message, history } = req.body;
+  const ip = getClientIp(req);
+  if (isRateLimited(ip)) {
+    return res.status(429).json({ error: "Too many requests. Please slow down." });
+  }
+
+  const { message, history } = req.body || {};
 
   if (!message || typeof message !== "string" || message.trim() === "") {
     return res.status(400).json({ error: "message must be a non-empty string" });
   }
+  if (message.length > MAX_MESSAGE_LEN) {
+    return res.status(400).json({ error: `message exceeds ${MAX_MESSAGE_LEN} characters` });
+  }
 
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: "GROQ_API_KEY is not configured" });
+    return res.status(500).json({ error: "Server misconfiguration" });
   }
+
+  const sanitizedHistory = Array.isArray(history)
+    ? history
+        .slice(-MAX_HISTORY_ENTRIES)
+        .map((m) => {
+          const role = m?.role === "model" || m?.role === "assistant" ? "assistant" : "user";
+          const raw = m?.parts?.[0]?.text ?? m?.content ?? "";
+          const content = typeof raw === "string" ? raw.slice(0, MAX_HISTORY_CONTENT_LEN) : "";
+          return { role, content };
+        })
+        .filter((m) => m.content.length > 0)
+    : [];
 
   try {
     const groq = new Groq({ apiKey });
 
-    // Build messages array: system + history + user message
     const messages = [
       { role: "system", content: PORTFOLIO_CONTEXT },
-      ...(Array.isArray(history)
-        ? history.map((m) => ({
-            role: m.role === "model" ? "assistant" : m.role,
-            content: m.parts?.[0]?.text || m.content || "",
-          }))
-        : []),
+      ...sanitizedHistory,
       { role: "user", content: message.trim() },
     ];
 
@@ -120,6 +164,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply });
   } catch (error) {
     console.error("Groq API error:", error);
-    return res.status(500).json({ error: "Failed to get response from AI", detail: error.message });
+    return res.status(500).json({ error: "Failed to get response from AI" });
   }
 }
