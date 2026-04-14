@@ -10,8 +10,8 @@ const Contact = () => {
       {/* Large faint background text — purely decorative */}
       <span
         aria-hidden="true"
-        className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold tracking-tighter text-[#1d1d1f] dark:text-[#f5f5f7] leading-none opacity-[0.06] whitespace-nowrap"
-        style={{ fontSize: "clamp(2.25rem, 13vw, 12rem)" }}
+        className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold tracking-tighter text-[#1d1d1f] dark:text-[#f5f5f7] leading-none opacity-[0.12] sm:opacity-[0.08] lg:opacity-[0.06] whitespace-nowrap"
+        style={{ fontSize: "clamp(3rem, 16vw, 12rem)" }}
       >
         Say Hello
       </span>
