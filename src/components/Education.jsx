@@ -15,7 +15,7 @@ const Education = () => {
       : "0 1px 4px rgba(0,0,0,0.05), 0 0 0 0.5px rgba(0,0,0,0.03)",
   };
   return (
-    <section id="education" className="py-12 sm:py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
+    <section id="education" className="py-8 sm:py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
       <motion.p
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 10 }}

@@ -5,7 +5,7 @@ import MagneticWrapper from "./MagneticWrapper";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 sm:py-28 border-t border-[#d2d2d7] dark:border-[#3a3a3c] relative overflow-hidden">
+    <section id="contact" className="py-10 sm:py-28 border-t border-[#d2d2d7] dark:border-[#3a3a3c] relative overflow-hidden">
 
       {/* Large faint background text — purely decorative */}
       <span

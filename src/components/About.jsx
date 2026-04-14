@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="py-12 sm:py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
+    <section id="about" className="py-8 sm:py-20 border-t border-[#d2d2d7] dark:border-[#3a3a3c]">
       <motion.p
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 10 }}
