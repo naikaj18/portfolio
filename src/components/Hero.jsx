@@ -115,7 +115,7 @@ const Hero = () => {
             <MagneticWrapper>
               <a
                 href="mailto:naikaj18@gmail.com"
-                className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#f6f5f3] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
+                className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
               >
                 Get in touch
               </a>
