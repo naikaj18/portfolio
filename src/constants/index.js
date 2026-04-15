@@ -60,9 +60,9 @@ export const EXPERIENCES = [
 ];
 
 export const SKILLS = {
-  "Languages & Frameworks": ["Python", "JavaScript", "TypeScript", "Go", "React.js", "Next.js", "FastAPI", "Django", "SQL", "PL/SQL", "React Native", "Tailwind CSS", "REST APIs"],
+  "Languages & Frameworks": ["Python", "JavaScript", "Django", "React.js", "TypeScript", "SQL", "PLSQL", "React Native", "Tailwind CSS", "FastAPI", "REST API", "Go"],
   "AI / ML": ["AWS Bedrock", "Strands Agents", "RAG Pipelines", "Prompt Engineering", "FAISS", "SageMaker", "NLP", "Scikit-learn", "NumPy", "Pandas"],
-  "Cloud & DevOps": ["AWS CDK", "Lambda", "DynamoDB", "CloudWatch", "S3", "Step Functions", "Docker", "CI/CD", "Claude Code", "GitHub", "JIRA", "Linux"],
+  "Cloud & DevOps": ["AWS CDK", "Lambda", "DynamoDB", "CloudWatch", "Docker", "CI/CD Pipelines", "Claude Code", "GitHub", "JIRA", "Data Structures & Algorithms"],
 };
 
 export const PROJECTS = [
