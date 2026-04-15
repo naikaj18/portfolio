@@ -13,10 +13,10 @@ html {
 
 /* ─── Accent color tokens ─────────────────────────────────────────── */
 :root {
-  --accent: #4f46e5;        /* indigo-600 - light mode */
+  --accent: #1e3a8a;        /* deep navy - light mode (Warm Academic) */
 }
 .dark {
-  --accent: #818cf8;        /* indigo-400 - dark mode, slightly brighter */
+  --accent: #93c5fd;        /* soft blue - dark mode */
 }
 
 /* ─── Status pill pulse animation ─────────────────────────────────── */
