@@ -72,7 +72,7 @@ const Hero = () => {
               aria-hidden="true"
             />
             <span className="text-xs text-[#1d1d1f] dark:text-[#f5f5f7] font-medium tracking-tight">
-              Currently at AAA · Open to work
+              Currently at Interstate · Open to work
             </span>
           </motion.div>
 

@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 
 const STATS = [
   { value: 4, label: "Years Experience", superscript: "+" },
-  { value: 3, label: "Companies", superscript: "+" },
+  { value: 4, label: "Companies", superscript: "+" },
   { value: 450, label: "LeetCode Solved", superscript: "+" },
   { value: 1, label: "AWS Certified", suffix: "x" },
 ];

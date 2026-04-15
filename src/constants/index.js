@@ -1,22 +1,35 @@
 export const HERO_CONTENT = `I build production AI systems and full-stack applications - RAG pipelines, agentic frameworks, and cloud infrastructure - hardened for security, wired for observability, and built to scale.`;
 
 export const ABOUT_TEXT = [
-  `I'm an AI, Cloud & Full Stack Engineer with end-to-end ownership across the stack - from React frontends and FastAPI backends to AWS CDK infrastructure. At AAA, I build agentic insurance chatbots on AWS Bedrock with RAG pipelines serving multiple states, and I treat security and observability as first-class concerns: IAM hardening, guardrail enforcement, CloudWatch dashboards, and real-time alerting are part of every system I ship.`,
-  `Before that, I delivered a full-stack RAG platform at Dreamline AI on SageMaker and FAISS, and optimized enterprise database systems at Capgemini - earning recognition awards for architecture improvements that cut query times by 25%. I hold an MS in Computer Science (3.74 GPA) from Cal State Fullerton and an AWS Certified Developer – Associate credential.`,
+  `I'm an AI, Cloud & Full Stack Engineer with end-to-end ownership across the stack - from React frontends and FastAPI backends to AWS CDK infrastructure. At Interstate, I'm shipping LLM insights pipelines and a full Predictions product redesign on Next.js: trading-grade interfaces backed by queue-based workers, multi-layer caching, and a gamified leaderboard and rewards system that drives engagement across the platform.`,
+  `Before Interstate, I built agentic insurance chatbots at AAA on AWS Bedrock with RAG pipelines serving customers across multiple states, where security and observability shipped with every system - IAM hardening, guardrail enforcement, CloudWatch dashboards, and real-time alerting. Earlier, I delivered a full-stack RAG platform at Dreamline AI on SageMaker and FAISS, and optimized enterprise database systems at Capgemini - earning recognition awards for architecture improvements that cut query times by 25%. I hold an MS in Computer Science (3.74 GPA) from Cal State Fullerton and an AWS Certified Developer – Associate credential.`,
   `I work fluently alongside agentic coding tools like Claude Code - they compress the distance between idea and production, but the discipline stays mine: tests, reviews, and observability are non-negotiable. On the side, I stay sharp on LeetCode - because good systems start with good fundamentals.`,
 ];
 
 export const EXPERIENCES = [
   {
-    year: "Jun 2025 – Present",
+    year: "Mar 2026 – Present",
+    role: "Software Engineer",
+    company: "Interstate",
+    type: "",
+    description: [
+      "Developed and launched an LLM insights pipeline delivering real-time, cost-controlled market signals to traders - built on queue-based workers and multi-layer caching to keep latency low and inference costs bounded.",
+      "Led a full redesign of the Predictions product on Next.js and React, delivering a trading-grade interface with interactive charts, responsive layouts, and an embedded AI insights experience that makes complex market data feel intuitive across desktop and mobile.",
+      "Architected and shipped a gamified leaderboard and rewards system end-to-end - schema, migrations, scheduled jobs, REST APIs, and UI integration - driving user engagement and retention across the platform.",
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "LLMs", "REST APIs", "PostgreSQL", "Queue Workers"],
+  },
+  {
+    year: "Jun 2025 – Mar 2026",
     role: "AI / Cloud Engineer",
     company: "Auto Club Enterprises (AAA)",
     type: "Contractor",
     description: [
       "Architected production AI chatbots for insurance and emergency roadside services on AWS Bedrock, combining Strands-based agentic frameworks with RAG pipelines to deliver context-aware responses across multiple product lines.",
-      "Engineered semantic caching within Lambda-backed Bedrock invocation flows, eliminating redundant LLM API calls and measurably reducing inference costs across dev, staging, and production environments.",
+      "Engineered semantic caching within Lambda-backed Bedrock invocation flows, eliminating redundant LLM API calls and measurably reducing inference costs across dev, QA, UAT, and production environments.",
+      "Drove continuous dataset improvement by building user feedback ingestion pipelines into Bedrock Knowledge Bases and running RAG evaluation jobs to benchmark retrieval quality.",
       "Built end-to-end observability infrastructure using AWS CDK, CloudWatch, CloudTrail, and SNS - enabling real-time monitoring of Bedrock API usage and guardrail violations across multi-region deployments.",
-      "Provisioned and maintained cloud infrastructure via AWS CDK and YAML-based CI/CD pipelines, delivering Lambda functions, Step Functions, S3 buckets, and DynamoDB tables as production-grade IaC.",
+      "Implemented Bedrock guardrails for content safety and compliance, and remediated security vulnerabilities flagged by Wiz scanning by upgrading Lambda dependencies and hardening IAM policies across all environments.",
     ],
     technologies: ["AWS Cloud", "Python", "AWS Bedrock", "RAG", "Strands Agents", "AWS CDK", "DynamoDB"],
   },
@@ -47,9 +60,9 @@ export const EXPERIENCES = [
 ];
 
 export const SKILLS = {
-  "Languages & Frameworks": ["Python", "React.js", "TypeScript", "JavaScript", "FastAPI", "Django", "SQL", "PL/SQL", "React Native", "Tailwind CSS"],
-  "AI / ML": ["AWS Bedrock", "Strands Agents", "RAG Pipelines", "Prompt Engineering", "FAISS", "SageMaker", "Scikit-learn", "NumPy", "Pandas", "NLP"],
-  "Cloud & DevOps": ["AWS CDK", "Lambda", "DynamoDB", "CloudWatch", "S3", "Step Functions", "Docker", "CI/CD", "GitHub", "Linux"],
+  "Languages & Frameworks": ["Python", "JavaScript", "TypeScript", "Go", "React.js", "Next.js", "FastAPI", "Django", "SQL", "PL/SQL", "React Native", "Tailwind CSS", "REST APIs"],
+  "AI / ML": ["AWS Bedrock", "Strands Agents", "RAG Pipelines", "Prompt Engineering", "FAISS", "SageMaker", "NLP", "Scikit-learn", "NumPy", "Pandas"],
+  "Cloud & DevOps": ["AWS CDK", "Lambda", "DynamoDB", "CloudWatch", "S3", "Step Functions", "Docker", "CI/CD", "Claude Code", "GitHub", "JIRA", "Linux"],
 };
 
 export const PROJECTS = [

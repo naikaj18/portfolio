@@ -29,7 +29,7 @@ EDUCATION TIMELINE:
 - MS in Computer Science, Cal State Fullerton (3.74 GPA) - graduated 2024
 
 EXPERIENCE SUMMARY:
-- 4+ years of professional experience total across Capgemini, Dreamline AI, and Auto Club Enterprises (AAA).
+- 4+ years of professional experience total across Capgemini, Dreamline AI, Auto Club Enterprises (AAA), and Interstate.
 
 WORK AUTHORIZATION:
 - Currently on F1 (OPT). H1B has been picked in the lottery.
@@ -42,29 +42,36 @@ FAVORITE TECH STACK:
 
 EXPERIENCE:
 
-1. AI / Cloud Engineer at Auto Club Enterprises (AAA) - Jun 2025 to Present (Contractor)
-   - Architected production AI chatbots for insurance and emergency roadside services on AWS Bedrock
+1. Software Engineer at Interstate - Mar 2026 to Present (CURRENT ROLE)
+   - Developed and launched an LLM insights pipeline delivering real-time, cost-controlled market signals to traders using queue-based workers and multi-layer caching
+   - Led a full redesign of the Predictions product on Next.js and React - trading-grade interface with interactive charts, responsive layouts, and an embedded AI insights experience
+   - Architected and shipped a gamified leaderboard and rewards system end-to-end (schema, migrations, scheduled jobs, REST APIs, UI integration)
+   - Tech: Next.js, React, TypeScript, LLMs, REST APIs, PostgreSQL, Queue Workers
+
+2. AI / Cloud Engineer at Auto Club Enterprises (AAA) - Jun 2025 to Mar 2026 (Contractor)
+   - Architected production AI chatbots for insurance and ERS on AWS Bedrock with Strands-based agentic frameworks and RAG pipelines
    - Engineered semantic caching within Lambda-backed Bedrock invocation flows
+   - Drove continuous dataset improvement via user feedback ingestion into Bedrock Knowledge Bases and RAG evaluation jobs
    - Built end-to-end observability infrastructure using AWS CDK, CloudWatch, CloudTrail, and SNS
-   - Provisioned cloud infrastructure via AWS CDK and YAML-based CI/CD pipelines
+   - Implemented Bedrock guardrails for content safety and remediated security vulnerabilities flagged by Wiz scanning
    - Tech: AWS Cloud, Python, AWS Bedrock, RAG, Strands Agents, AWS CDK, DynamoDB
 
-2. AI / Full Stack Developer at Dreamline AI - Jun 2024 to Jun 2025
+3. AI / Full Stack Developer at Dreamline AI - Jun 2024 to Jun 2025
    - Built and deployed a RAG Q&A chatbot for the GreenZone Mapping platform using OpenAI embeddings, FAISS, and Mistral 7B on SageMaker
    - Owned the full stack: React frontend, FastAPI backend, AWS infrastructure
    - Designed SQL Server schema for cross-domain analytics
    - Tech: Python, FastAPI, React, AWS SageMaker, FAISS, OpenAI
 
-3. Senior Software Developer at Capgemini - Jan 2020 to Jul 2022
+4. Senior Software Developer at Capgemini - Jan 2020 to Jul 2022
    - Optimized 100+ enterprise database objects, reducing query time by 25%
    - Delivered full-stack analytics dashboard (Django REST + React on AWS EC2)
    - Won STAR and XTRA MILE awards
    - Tech: Python, Django, React, PostgreSQL, SQL, PL/SQL
 
 SKILLS:
-- Languages & Frameworks: Python, React.js, TypeScript, JavaScript, FastAPI, Django, SQL, PL/SQL, React Native, Tailwind CSS
-- AI / ML: AWS Bedrock, Strands Agents, RAG Pipelines, Prompt Engineering, FAISS, SageMaker, Scikit-learn, NumPy, Pandas, NLP
-- Cloud & DevOps: AWS CDK, Lambda, DynamoDB, CloudWatch, S3, Step Functions, Docker, CI/CD, GitHub, Linux
+- Languages & Frameworks: Python, JavaScript, TypeScript, Go, React.js, Next.js, FastAPI, Django, SQL, PL/SQL, React Native, Tailwind CSS, REST APIs
+- AI / ML: AWS Bedrock, Strands Agents, RAG Pipelines, Prompt Engineering, FAISS, SageMaker, NLP, Scikit-learn, NumPy, Pandas
+- Cloud & DevOps: AWS CDK, Lambda, DynamoDB, CloudWatch, S3, Step Functions, Docker, CI/CD, Claude Code, GitHub, JIRA, Linux
 
 PROJECTS:
 
