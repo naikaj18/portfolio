@@ -17,7 +17,7 @@ export const EXPERIENCES = [
       "Led a full redesign of the Predictions product on Next.js and React, delivering a trading-grade interface with interactive charts, responsive layouts, and an embedded AI insights experience that makes complex market data feel intuitive across desktop and mobile.",
       "Architected and shipped a gamified leaderboard and rewards system end-to-end - schema, migrations, scheduled jobs, REST APIs, and UI integration - driving user engagement and retention across the platform.",
     ],
-    technologies: ["Next.js", "React", "TypeScript", "LLMs", "REST APIs", "PostgreSQL", "Queue Workers"],
+    technologies: ["Next.js", "React", "TypeScript", "LLMs", "REST APIs", "PostgreSQL"],
   },
   {
     year: "Jun 2025 – Mar 2026",

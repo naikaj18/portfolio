@@ -46,7 +46,7 @@ EXPERIENCE:
    - Developed and launched an LLM insights pipeline delivering real-time, cost-controlled market signals to traders using queue-based workers and multi-layer caching
    - Led a full redesign of the Predictions product on Next.js and React - trading-grade interface with interactive charts, responsive layouts, and an embedded AI insights experience
    - Architected and shipped a gamified leaderboard and rewards system end-to-end (schema, migrations, scheduled jobs, REST APIs, UI integration)
-   - Tech: Next.js, React, TypeScript, LLMs, REST APIs, PostgreSQL, Queue Workers
+   - Tech: Next.js, React, TypeScript, LLMs, REST APIs, PostgreSQL
 
 2. AI / Cloud Engineer at Auto Club Enterprises (AAA) - Jun 2025 to Mar 2026 (Contractor)
    - Architected production AI chatbots for insurance and ERS on AWS Bedrock with Strands-based agentic frameworks and RAG pipelines
