@@ -42,7 +42,7 @@ const Navbar = () => {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[#faf7f2]/70 dark:bg-white/[0.04] backdrop-blur-xl dark:backdrop-blur-xl border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
+          ? "bg-[#f6f5f3]/70 dark:bg-white/[0.04] backdrop-blur-xl dark:backdrop-blur-xl border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
           : "bg-transparent"
       }`}
     >
@@ -151,7 +151,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="md:hidden bg-[#faf7f2]/90 dark:bg-[#1c1c1e]/90 backdrop-blur-xl border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
+            className="md:hidden bg-[#f6f5f3]/90 dark:bg-[#1c1c1e]/90 backdrop-blur-xl border-b border-[#d2d2d7]/70 dark:border-[#3a3a3c]"
           >
             <div className="mx-auto max-w-5xl px-6 sm:px-10 py-4 flex flex-col gap-1">
               {NAV_LINKS.map(({ label, href }) => {

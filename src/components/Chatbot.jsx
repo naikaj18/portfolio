@@ -90,7 +90,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed bottom-24 right-6 z-50 flex flex-col rounded-2xl border border-[#d2d2d7] dark:border-[#3a3a3c] shadow-2xl bg-[#faf7f2] dark:bg-[#1c1c1e]"
+            className="fixed bottom-24 right-6 z-50 flex flex-col rounded-2xl border border-[#d2d2d7] dark:border-[#3a3a3c] shadow-2xl bg-[#f6f5f3] dark:bg-[#1c1c1e]"
             style={{
               width: "360px",
               maxWidth: "calc(100vw - 3rem)",
@@ -115,7 +115,7 @@ export default function Chatbot() {
                   <div
                     className={`max-w-[80%] px-4 py-2.5 text-sm leading-relaxed ${
                       msg.role === "user"
-                        ? "bg-[#1d1d1f] dark:bg-[#faf7f2] text-[#f5f5f7] dark:text-[#1d1d1f] rounded-2xl rounded-br-md"
+                        ? "bg-[#1d1d1f] dark:bg-[#f6f5f3] text-[#f5f5f7] dark:text-[#1d1d1f] rounded-2xl rounded-br-md"
                         : "bg-white dark:bg-white/10 text-[#1d1d1f] dark:text-[#f5f5f7] border border-[#d2d2d7] dark:border-[#3a3a3c] rounded-2xl rounded-bl-md"
                     }`}
                   >
@@ -140,7 +140,7 @@ export default function Chatbot() {
                     <button
                       key={s}
                       onClick={() => sendMessage(s)}
-                      className="text-xs px-3 py-1.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] text-[#6e6e73] dark:text-[#a1a1a6] hover:bg-[#1d1d1f] hover:text-[#f5f5f7] dark:hover:bg-[#faf7f2] dark:hover:text-[#1d1d1f] hover:border-transparent transition-colors"
+                      className="text-xs px-3 py-1.5 rounded-full border border-[#d2d2d7] dark:border-[#3a3a3c] text-[#6e6e73] dark:text-[#a1a1a6] hover:bg-[#1d1d1f] hover:text-[#f5f5f7] dark:hover:bg-[#f6f5f3] dark:hover:text-[#1d1d1f] hover:border-transparent transition-colors"
                     >
                       {s}
                     </button>
@@ -167,7 +167,7 @@ export default function Chatbot() {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => sendMessage()}
                 disabled={!input.trim() || loading}
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-[#1d1d1f] dark:bg-[#faf7f2] text-[#f5f5f7] dark:text-[#1d1d1f] disabled:opacity-40 transition-opacity"
+                className="w-8 h-8 rounded-full flex items-center justify-center bg-[#1d1d1f] dark:bg-[#f6f5f3] text-[#f5f5f7] dark:text-[#1d1d1f] disabled:opacity-40 transition-opacity"
               >
                 <Send className="w-3.5 h-3.5" />
               </motion.button>
@@ -180,7 +180,7 @@ export default function Chatbot() {
       <motion.button
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center bg-[#1d1d1f] dark:bg-[#faf7f2] text-[#f5f5f7] dark:text-[#1d1d1f] shadow-2xl"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center bg-[#1d1d1f] dark:bg-[#f6f5f3] text-[#f5f5f7] dark:text-[#1d1d1f] shadow-2xl"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>

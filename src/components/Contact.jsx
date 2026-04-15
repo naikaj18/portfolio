@@ -59,7 +59,7 @@ const Contact = () => {
             <a
               href={`mailto:${CONTACT.email}`}
               aria-label="Send email to Naikaj"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#faf7f2] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1d1d1f] dark:bg-[#f6f5f3] text-white dark:text-black text-sm font-medium hover:bg-[#3d3d3f] dark:hover:bg-[#e5e5e7] transition-colors duration-200"
             >
               <Mail size={14} aria-hidden="true" />
               {CONTACT.email}
