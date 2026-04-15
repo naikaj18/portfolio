@@ -89,7 +89,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="text-[clamp(2rem,9vw,3rem)] sm:text-5xl lg:text-8xl font-semibold tracking-tight leading-tight mb-6 break-words"
+            className="font-serif-display text-[clamp(2.75rem,11vw,7rem)] sm:text-6xl lg:text-[9rem] font-semibold tracking-[-0.03em] leading-[0.95] mb-6 break-words"
             style={{
               backgroundImage: nameGradient,
               WebkitBackgroundClip: "text",
@@ -97,7 +97,7 @@ const Hero = () => {
               backgroundClip: "text",
             }}
           >
-            Naikaj Shiradkar
+            Naikaj<br/>Shiradkar<span style={{ color: "var(--accent)" }}>.</span>
           </motion.h1>
 
           {/* Typewriter tagline */}
