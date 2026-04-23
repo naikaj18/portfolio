@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
+import { posthog } from "../lib/posthog.js";
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,11 @@ export default function Chatbot() {
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setLoading(true);
+
+    posthog.capture?.("chatbot_message_sent", {
+      message_length: messageText.length,
+      turn_index: messages.length,
+    });
 
     const history = messages
       .slice(1)
@@ -179,7 +185,13 @@ export default function Chatbot() {
       {/* Toggle Button */}
       <motion.button
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => {
+          setIsOpen((prev) => {
+            const next = !prev;
+            posthog.capture?.(next ? "chatbot_opened" : "chatbot_closed");
+            return next;
+          });
+        }}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center bg-[#1d1d1f] dark:bg-[#f5f5f7] text-[#f5f5f7] dark:text-[#1d1d1f] shadow-2xl"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
